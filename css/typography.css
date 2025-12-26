@@ -1,0 +1,374 @@
+/* ===================================
+   TYPOGRAPHY SYSTEM - Aligned Arc
+   Primary: Founders Grotesk (Sans-serif) - Body text
+   Display: Cormorant Garamond (Serif) - Headlines
+   =================================== */
+
+/* ===================================
+   FONT IMPORTS
+   =================================== */
+
+/* Founders Grotesk - Sans-serif (Body Font) */
+@font-face {
+  font-family: 'Founders Grotesk';
+  src: url('/assets/fonts/FoundersGrotesk-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Founders Grotesk';
+  src: url('/assets/fonts/FoundersGrotesk-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Founders Grotesk';
+  src: url('/assets/fonts/FoundersGrotesk-RegularItalic.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Founders Grotesk';
+  src: url('/assets/fonts/FoundersGrotesk-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Founders Grotesk';
+  src: url('/assets/fonts/FoundersGrotesk-MediumItalic.otf') format('opentype');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Founders Grotesk';
+  src: url('/assets/fonts/FoundersGrotesk-Bold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Founders Grotesk';
+  src: url('/assets/fonts/FoundersGrotesk-BoldItalic.otf') format('opentype');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Cormorant Garamond - Serif (Display Font) */
+@font-face {
+  font-family: 'Cormorant Garamond';
+  src: url('/assets/fonts/CormorantGaramond-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cormorant Garamond';
+  src: url('/assets/fonts/CormorantGaramond-LightItalic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cormorant Garamond';
+  src: url('/assets/fonts/CormorantGaramond-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cormorant Garamond';
+  src: url('/assets/fonts/CormorantGaramond-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cormorant Garamond';
+  src: url('/assets/fonts/CormorantGaramond-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cormorant Garamond';
+  src: url('/assets/fonts/CormorantGaramond-MediumItalic.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cormorant Garamond';
+  src: url('/assets/fonts/CormorantGaramond-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cormorant Garamond';
+  src: url('/assets/fonts/CormorantGaramond-SemiBoldItalic.ttf') format('truetype');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cormorant Garamond';
+  src: url('/assets/fonts/CormorantGaramond-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cormorant Garamond';
+  src: url('/assets/fonts/CormorantGaramond-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* ===================================
+   BASE TYPOGRAPHY
+   =================================== */
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: var(--leading-relaxed);
+  color: var(--color-text);
+  font-weight: 400;
+}
+
+/* ===================================
+   HEADINGS - Cormorant Garamond
+   =================================== */
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  line-height: var(--leading-tight);
+  margin-top: 0;
+  margin-bottom: var(--space-md);
+  color: var(--color-text);
+}
+
+h1, .h1 {
+  font-size: var(--text-4xl);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
+h2, .h2 {
+  font-size: var(--text-3xl);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+h3, .h3 {
+  font-size: var(--text-2xl);
+  font-weight: 500;
+}
+
+h4, .h4 {
+  font-size: var(--text-xl);
+  font-weight: 500;
+}
+
+h5, .h5 {
+  font-size: var(--text-lg);
+  font-weight: 500;
+}
+
+h6, .h6 {
+  font-size: var(--text-base);
+  font-weight: 600;
+  font-family: var(--font-body);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ===================================
+   SECTION TITLES
+   =================================== */
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: var(--text-3xl);
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: var(--space-sm);
+  line-height: var(--leading-tight);
+}
+
+.section-subtitle {
+  font-family: var(--font-body);
+  font-size: var(--text-lg);
+  color: var(--color-text-light);
+  text-align: center;
+  margin-bottom: var(--space-sm);
+  font-weight: 400;
+  line-height: var(--leading-normal);
+}
+
+/* ===================================
+   TEXT VARIANTS
+   =================================== */
+
+.text-large {
+  font-size: var(--text-xl);
+  line-height: var(--leading-normal);
+}
+
+.text-small {
+  font-size: var(--text-sm);
+}
+
+.text-xs {
+  font-size: var(--text-xs);
+}
+
+/* ===================================
+   TEXT EMPHASIS
+   =================================== */
+
+em {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 500;
+}
+
+strong {
+  font-weight: 600;
+}
+
+.highlight {
+  color: var(--color-primary);
+  font-style: italic;
+}
+
+.text-accent {
+  color: var(--color-cyan);
+}
+
+/* ===================================
+   LINKS
+   =================================== */
+
+a {
+  color: var(--color-cyan);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--color-charcoal);
+  text-decoration: underline;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--color-cyan);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* ===================================
+   PARAGRAPHS
+   =================================== */
+
+p {
+  margin-bottom: var(--space-md);
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+/* ===================================
+   LISTS
+   =================================== */
+
+ul, ol {
+  margin-bottom: var(--space-md);
+  padding-left: var(--space-lg);
+}
+
+li {
+  margin-bottom: var(--space-xs);
+}
+
+/* ===================================
+   BLOCKQUOTES
+   =================================== */
+
+blockquote {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-style: italic;
+  line-height: var(--leading-normal);
+  padding: var(--space-lg);
+  border-left: 4px solid var(--color-primary);
+  background-color: var(--color-background-alt);
+  margin: var(--space-xl) 0;
+  border-radius: var(--radius-sm);
+}
+
+blockquote p {
+  margin-bottom: var(--space-sm);
+}
+
+blockquote cite {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  font-style: normal;
+  font-weight: 600;
+  color: var(--color-text-light);
+}
+
+/* ===================================
+   UTILITY CLASSES
+   =================================== */
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+.uppercase {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
