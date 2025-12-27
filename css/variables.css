@@ -116,6 +116,12 @@
    RESPONSIVE ADJUSTMENTS
    =================================== */
 
+@media (max-width: 479px) {
+  :root {
+    --container-padding: var(--space-sm);
+  }
+}
+
 @media (min-width: 768px) {
   :root {
     --container-padding: var(--space-lg);

@@ -342,18 +342,20 @@
 
   /* Adjust label positioning for mobile */
   .home-a-tag-1 {
-    top: -15px;
-    left: -20px;
+    animation-delay: 0.3s;
+    inset: -25px auto auto 20%;;
   }
 
   .home-a-tag-2 {
-    top: 35%;
-    right: -30px;
+    animation-delay: 0.5s;
+    inset: auto 5% 30px auto;
+
   }
 
   .home-a-tag-3 {
-    bottom: -15px;
+    bottom: -20px;
     left: 10%;
+    animation-delay: 0.7s;
   }
 
   .label-master {
@@ -452,12 +454,15 @@
 @media (max-width: 1023px) {
   .services__grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-sm);
   }
 }
 
 @media (max-width: 767px) {
   .services__grid {
     grid-template-columns: 1fr;
+    gap: var(--space-md);
+    margin-top: var(--space-xl);
   }
 }
 

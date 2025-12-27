@@ -25,6 +25,12 @@
   padding: var(--space-3xl);
 }
 
+@media (max-width: 767px) {
+  .container--wide {
+    padding: var(--space-md);
+  }
+}
+
 .container--full {
   max-width: none;
   padding-left: 0;
