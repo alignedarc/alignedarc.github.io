@@ -277,6 +277,10 @@
   min-height: 100vh;
 }
 
+.hero__spacer {
+  height: calc(var(--space-4xl) * 1.5);
+}
+
 /* Individual feature sections */
 .hero__feature {
   margin-bottom: var(--space-4xl);
