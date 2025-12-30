@@ -689,7 +689,8 @@
 
 .about {
   background-color: white;
-  padding: var(--space-lg) 0;
+  padding: var(--space-lg);
+  padding-bottom: var(--space-3xl);
 }
 
 .about__grid {
@@ -745,7 +746,7 @@
 
 .contact {
   background: linear-gradient(135deg, var(--color-background-alt) 0%, white 100%);
-  padding: var(--space-4xl) 0;
+  padding: var(--space-3xl) 0;
 }
 
 .contact__direct {
