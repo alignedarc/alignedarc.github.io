@@ -8,19 +8,23 @@
    =================================== */
 
 .btn {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   font-family: var(--font-body);
   font-size: var(--text-base);
   font-weight: 600;
   padding: 0.75rem 1.5rem;
   border-radius: var(--radius-pill);
   text-decoration: none;
-  text-align: center;
   cursor: pointer;
   border: none;
   transition: all var(--transition-base);
   white-space: nowrap;
   line-height: 1;
+  /* Fix custom font baseline alignment */
+  position: relative;
+  top: -1px;
 }
 
 .btn--primary {
@@ -585,8 +589,6 @@
   font-family: var(--font-display);
   font-size: var(--text-2xl);
   font-weight: 600;
-  margin-top: var(--space-md);
-  margin-bottom: var(--space-lg);
   flex-shrink: 0;
 }
 
@@ -617,40 +619,62 @@
 
 .impact-carousel__container {
   position: relative;
-  overflow: hidden;
+  overflow: visible;
   padding: var(--space-xl) 0;
+  min-height: 400px;
 }
 
 .impact-carousel__track {
+  position: relative;
+  width: 100%;
+  min-height: 400px;
   display: flex;
-  gap: var(--space-xl);
-  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-  padding: 0 calc(50% - 300px);
+  align-items: center;
+  justify-content: center;
 }
 
 .impact-card {
-  position: relative;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
   background: white;
   border-radius: 32px;
-  padding: var(--space-3xl) var(--space-2xl);
+  padding: var(--space-2xl) var(--space-xl);
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
-  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   overflow: hidden;
-  min-height: 400px;
-  min-width: 600px;
+
+  width: 90vw;
   max-width: 600px;
-  flex-shrink: 0;
+
   display: flex;
   flex-direction: column;
-  filter: blur(8px);
-  opacity: 0.4;
-  transform: scale(0.85);
+
+  /* Hidden by default */
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1;
+
+  transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+              visibility 0.6s,
+              transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Slide-in animation states */
+.impact-card.slide-from-right {
+  transform: translate(-50%, -50%) translateX(50px);
+}
+
+.impact-card.slide-from-left {
+  transform: translate(-50%, -50%) translateX(-50px);
 }
 
 .impact-card.active {
-  filter: blur(0);
   opacity: 1;
-  transform: scale(1);
+  visibility: visible;
+  z-index: 2;
+  transform: translate(-50%, -50%) translateX(0);
   box-shadow: 0 30px 80px rgba(0, 0, 0, 0.3);
 }
 
@@ -737,7 +761,7 @@
   background-color: var(--color-charcoal);
   padding: 8px 16px;
   border-radius: 100px;
-  margin-bottom: var(--space-lg);
+  margin-bottom: var(--space-md);
   width: fit-content;
 }
 
@@ -747,7 +771,7 @@
   font-size: var(--text-2xl);
   font-weight: 600;
   color: var(--color-charcoal);
-  margin-bottom: var(--space-xl);
+  margin-bottom: var(--space-lg);
   line-height: 1.2;
 }
 
@@ -757,8 +781,8 @@
   align-items: center;
   justify-content: center;
   gap: var(--space-lg);
-  margin-bottom: var(--space-xl);
-  padding: var(--space-xl) 0;
+  margin-bottom: var(--space-lg);
+  padding: var(--space-lg) 0;
 }
 
 .transformation__before,
@@ -856,7 +880,7 @@
   line-height: 1.6;
   color: var(--color-text-light);
   font-weight: 400;
-  padding-top: var(--space-lg);
+  padding-top: var(--space-md);
   border-top: 1px solid rgba(0, 0, 0, 0.08);
 }
 
@@ -928,12 +952,7 @@
 
 /* Responsive adjustments */
 @media (max-width: 1200px) {
-  .impact-carousel__track {
-    padding: 0 calc(50% - 250px);
-  }
-
   .impact-card {
-    min-width: 500px;
     max-width: 500px;
   }
 
@@ -947,15 +966,17 @@
 }
 
 @media (max-width: 1023px) {
+  .impact-carousel__container {
+    min-height: 400px;
+  }
+
   .impact-carousel__track {
-    padding: 0 calc(50% - 200px);
+    min-height: 400px;
   }
 
   .impact-card {
-    min-width: 400px;
-    max-width: 400px;
-    min-height: auto;
-    padding: var(--space-2xl) var(--space-xl);
+    max-width: 500px;
+    padding: var(--space-xl) var(--space-lg);
   }
 
   .transformation__value {
@@ -973,13 +994,16 @@
 }
 
 @media (max-width: 767px) {
+  .impact-carousel__container {
+    min-height: 400px;
+  }
+
   .impact-carousel__track {
-    padding: 0 calc(50% - 160px);
+    min-height: 400px;
   }
 
   .impact-card {
-    min-width: 320px;
-    max-width: 320px;
+    max-width: 400px;
     padding: var(--space-xl) var(--space-lg);
   }
 
@@ -1023,6 +1047,21 @@
 
   .carousel-nav--next {
     right: var(--space-xs);
+  }
+}
+
+@media (max-width: 479px) {
+  .impact-carousel__container {
+    min-height: 400px;
+  }
+
+  .impact-carousel__track {
+    min-height: 400px;
+  }
+
+  .impact-card {
+    max-width: 320px;
+    width: 95vw;
   }
 }
 
@@ -1197,4 +1236,21 @@
   .testimonial-card__text {
     font-size: var(--text-base);
   }
+}
+
+/* ===================================
+   UTILITY CLASSES
+   =================================== */
+
+/* Screen reader only - visually hidden but accessible */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }

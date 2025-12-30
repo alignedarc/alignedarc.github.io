@@ -15,6 +15,10 @@
   font-weight: 300;
   font-style: normal;
   font-display: swap;
+  /* Improve font metrics */
+  ascent-override: 90%;
+  descent-override: 22%;
+  line-gap-override: 0%;
 }
 
 @font-face {
@@ -23,6 +27,9 @@
   font-weight: 400;
   font-style: normal;
   font-display: swap;
+  ascent-override: 90%;
+  descent-override: 22%;
+  line-gap-override: 0%;
 }
 
 @font-face {
@@ -31,6 +38,9 @@
   font-weight: 400;
   font-style: italic;
   font-display: swap;
+  ascent-override: 90%;
+  descent-override: 22%;
+  line-gap-override: 0%;
 }
 
 @font-face {
@@ -39,6 +49,9 @@
   font-weight: 500;
   font-style: normal;
   font-display: swap;
+  ascent-override: 90%;
+  descent-override: 22%;
+  line-gap-override: 0%;
 }
 
 @font-face {
@@ -47,6 +60,9 @@
   font-weight: 500;
   font-style: italic;
   font-display: swap;
+  ascent-override: 90%;
+  descent-override: 22%;
+  line-gap-override: 0%;
 }
 
 @font-face {
@@ -55,6 +71,9 @@
   font-weight: 600;
   font-style: normal;
   font-display: swap;
+  ascent-override: 90%;
+  descent-override: 22%;
+  line-gap-override: 0%;
 }
 
 @font-face {
@@ -63,6 +82,9 @@
   font-weight: 600;
   font-style: italic;
   font-display: swap;
+  ascent-override: 90%;
+  descent-override: 22%;
+  line-gap-override: 0%;
 }
 
 /* Cormorant Garamond - Serif (Display Font) */
@@ -156,6 +178,11 @@ body {
   line-height: var(--leading-relaxed);
   color: var(--color-text);
   font-weight: 400;
+  /* Improve font rendering */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern" 1;
 }
 
 /* ===================================

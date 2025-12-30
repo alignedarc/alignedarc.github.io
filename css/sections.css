@@ -170,14 +170,19 @@
 
 /* Label small text */
 .label-small {
-  font-family: monospace;
+  font-family: var(--font-body);
   font-size: 10px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
-  line-height: 12px;
+  line-height: 1;
   text-align: center;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  /* Fix custom font vertical alignment */
+  position: relative;
 }
 
 /* Fade in animation for labels */
@@ -535,7 +540,7 @@
 }
 
 .process__header:hover {
-  background-color: rgba(208, 159, 166, 0.05);
+  background-color: rgba(30, 30, 30, 0.05);
 }
 
 .process__header-content {
@@ -549,7 +554,7 @@
   font-family: var(--font-body);
   font-size: var(--text-lg);
   font-weight: 400;
-  color: var(--color-background);
+  color: white;
   opacity: 0.6;
   min-width: 2.5rem;
 }
@@ -647,7 +652,7 @@
 .testimonials {
   background-color: var(--color-charcoal);
   padding-top: var(--space-sm);
-  padding-bottom: var(--space-3xl);
+  padding-bottom: var(--space-lg);
 }
 
 .testimonials .section-title {
@@ -680,7 +685,7 @@
 
 .about {
   background-color: white;
-  padding: var(--space-2xl) 0;
+  padding: var(--space-lg) 0;
 }
 
 .about__grid {
