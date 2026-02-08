@@ -75,22 +75,41 @@
     },
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
-      "name": "Consulting Services",
+      "name": "Workshop Services",
       "itemListElement": [
         {
-          "@type": "Service",
-          "name": "Strategic Facilitation",
-          "description": "Facilitated sessions for strategic decisions, priorities, and problem-solving"
+          "@type": "OfferCatalog",
+          "name": "Quick Sessions (2-3 hours)",
+          "itemListElement": [
+            { "@type": "Service", "name": "Decision Accelerator", "description": "Make stuck decisions fast in a focused 2-3 hour session" },
+            { "@type": "Service", "name": "Priority Reset", "description": "Align your team on the top 3 priorities" },
+            { "@type": "Service", "name": "Sprint Retro", "description": "A retrospective format that actually drives change" },
+            { "@type": "Service", "name": "Team Friction", "description": "Understand why team members clash and build collaboration" },
+            { "@type": "Service", "name": "Strategy Clarity", "description": "Translate high-level strategy into actionable steps" }
+          ]
         },
         {
-          "@type": "Service",
-          "name": "Strengths-Based Team Work",
-          "description": "CliftonStrengths mapping translated into team operations and collaboration"
+          "@type": "OfferCatalog",
+          "name": "Full-Day Workshops (6-8 hours)",
+          "itemListElement": [
+            { "@type": "Service", "name": "Quarterly Planning", "description": "Structure your next quarter with clear goals and owners" },
+            { "@type": "Service", "name": "Product Roadmap", "description": "Align product direction across stakeholders" },
+            { "@type": "Service", "name": "Team Operating System", "description": "Build how your team runs day-to-day" },
+            { "@type": "Service", "name": "Team Kickoff", "description": "New team, strong start with shared norms" },
+            { "@type": "Service", "name": "Performance Breakthrough", "description": "Unlock stuck performance with targeted frameworks" },
+            { "@type": "Service", "name": "OKR Alignment", "description": "OKRs everyone understands and commits to" },
+            { "@type": "Service", "name": "Innovation Sprint", "description": "Breakthrough ideas in a 2-day intensive sprint" }
+          ]
         },
         {
-          "@type": "Service",
-          "name": "Integrated Alignment Program",
-          "description": "Combined strategic clarity and team performance program over 8-12 weeks"
+          "@type": "OfferCatalog",
+          "name": "Goa Offsite Packages",
+          "itemListElement": [
+            { "@type": "Service", "name": "Lite", "description": "One facilitated session plus insider local recommendations" },
+            { "@type": "Service", "name": "Balanced", "description": "Two sessions plus curated team activities" },
+            { "@type": "Service", "name": "Productive", "description": "Morning sessions with full logistics handled" },
+            { "@type": "Service", "name": "Full Offsite", "description": "Complete multi-day strategic retreat in Goa" }
+          ]
         }
       ]
     },
@@ -149,10 +168,10 @@
         <div class="hero__content">
           <div class="headline-home-a">
             <h1 class="hero__title" animate="title-load" style="opacity: 1; filter: blur(0px);">
-              Define your<br>
-              collective north star.
+              Build decision frameworks<br>
+              your team can keep using.
             </h1>
-            <div class="home-a-tag-1" style="opacity: 1;">
+            <!-- <div class="home-a-tag-1" style="opacity: 1;">
               <div class="label-master yellow">
                 <div class="label-small">PEOPLE AND STRATEGY</div>
               </div>
@@ -166,137 +185,223 @@
               <div class="label-master cyan">
                 <div class="label-small">CONSULTING</div>
               </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="hero__image-wrapper" id="hero-image-wrapper">
-          <div class="hero__image" id="hero-image" style="background-image: url('/assets/images/hero-image.png');" role="img" aria-label="Collaborative team working together">
-          </div>
-        </div>
-
-        <div class="hero__scroll-content">
-          <div>
-            <h3>
-              Translate individual dynamics into clear, collaborative decision frameworks.<br>
-              <span style="font-style: italic;">Spark lasting momentum between people and strategy.</span>
+            </div> -->
+            <h3 class="hero__subtitle" animate="title-load" style="opacity: 1; filter: blur(0px);">
+              Stop refereeing every decision your team makes!
             </h3>
+            <p class="hero__subtitle-note" animate="title-load" style="opacity: 1; filter: blur(0px);">
+              We'll tell you exactly which framework fits your situation&mdash;no pitch.
+            </p>
           </div>
 
-          <div class="hero__spacer"></div>
-  
-          <!-- Feature Section 1 -->
-          <div class="hero__feature">
-            <div class="hero__feature-label">WHERE WE BEGIN</div>
-            <p class="hero__feature-text">With what's stuck. With what keeps circling. With the pattern you can't quite name.</p>
-          </div>
-
-          <!-- Feature Section 2 -->
-          <div class="hero__feature">
-            <div class="hero__feature-label">WHAT ACTUALLY SHIFTS</div>
-            <p class="hero__feature-text">I don't give you answers. I facilitate your team's thinking until clarity becomes yours to keep.</p>
-          </div>
-
-          <!-- Feature Section 3 -->
-          <div class="hero__feature">
-            <div class="hero__feature-label">THE WORK THAT STICKS</div>
-            <p class="hero__feature-text">Frameworks you'll use without me. Decisions that happen in one meeting, not six.</p>
-          </div>
         </div>
       </div>
     </section>
     
 
-    <!-- SERVICES SECTION -->
-    <section class="services" id="services">
+    <!-- WORKSHOPS BENTO GRID SECTION -->
+    <section class="workshops" id="services">
       <div class="container container--wide">
-        <h2 class="section-title">How We Work Together</h2>
-        <p class="section-subtitle">Choose the path that matches where your team is stuck</p>
+        <h2 class="section-title">Which Workshop Do You Need?</h2>
+        <p class="section-subtitle">Pick based on timeline and scope</p>
 
-        <div class="services__grid">
+        <div class="workshops__grid">
 
-          <!-- Service 1: Strategic Facilitation -->
-          <article class="service-card">
-            <div class="service-card__image">
-              <img src="/assets/images/service-strategic.jpg" alt="Strategic Facilitation Workshop" width="400" height="240" loading="lazy">
+          <!-- ========== QUICK SESSIONS (2-3 hrs) ========== -->
+          <a href="/services/quick-sessions" class="workshops__category workshops__category--quick">
+            <div>
+              <span class="workshops__category-badge">2-3 hours</span>
+              <h3 class="workshops__category-name">Quick Sessions</h3>
+              <p class="workshops__category-tagline">Focused sprints for teams that need clarity fast</p>
             </div>
-            <div class="service-card__content">
-              <h3 class="service-card__title">Strategic Facilitation</h3>
-              <p class="service-card__subtitle">When teams are stuck on WHAT to do</p>
+            <span class="workshops__category-link">Explore all &rarr;</span>
+            <svg class="workshops__category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+            </svg>
+          </a>
 
-              <ul class="service-card__features">
-                <li>Problem-solving sessions</li>
-                <li>Strategy workshops</li>
-                <li>Planning sessions</li>
-              </ul>
-
-              <p class="service-card__description">Facilitates team through strategic challenges to create clarity</p>
-
-              <div class="service-card__deliverables">
-                <strong>Deliverables:</strong>
-                <span>Decision frameworks • Shared decision logic • Action plans</span>
-              </div>
-
-              <a href="#contact" class="btn btn--secondary">Explore</a>
-            </div>
+          <!-- Quick Session tiles -->
+          <article class="workshops__tile workshops__tile--quick" id="decision-accelerator">
+            <svg class="workshops__tile-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+            <h4 class="workshops__tile-title">Decision Accelerator</h4>
+            <p class="workshops__tile-tagline">Make stuck decisions fast</p>
+            <span class="workshops__tile-duration">2-3 hrs</span>
+            <a href="/services/quick-sessions/decision-accelerator" class="workshops__tile-link">More details &rarr;</a>
           </article>
 
-          <!-- Service 2: Strengths-Based Team Work -->
-          <article class="service-card">
-            <div class="service-card__image">
-              <img src="/assets/images/service-strengths.jpg" alt="Strengths-Based Team Development" width="400" height="240" loading="lazy">
-            </div>
-            <div class="service-card__content">
-              <h3 class="service-card__title">Strengths-Based Team Work</h3>
-              <p class="service-card__subtitle">When teams are stuck on HOW to work together</p>
-
-              <ul class="service-card__features">
-                <li>Team wiring mapping (CliftonStrengths)</li>
-                <li>Collaboration protocols</li>
-                <li>Strengths-aware delegation</li>
-              </ul>
-
-              <p class="service-card__description">Translates individual strengths into team operations</p>
-
-              <div class="service-card__deliverables">
-                <strong>Deliverables:</strong>
-                <span>Team strengths maps • User manuals • Collaboration protocols</span>
-              </div>
-
-              <a href="#contact" class="btn btn--secondary">Explore</a>
-            </div>
+          <article class="workshops__tile workshops__tile--quick" id="priority-reset">
+            <h4 class="workshops__tile-title">Priority Reset</h4>
+            <p class="workshops__tile-tagline">Align on top 3 priorities</p>
+            <span class="workshops__tile-duration">2-3 hrs</span>
+            <a href="/services/quick-sessions/priority-reset" class="workshops__tile-link">More details &rarr;</a>
           </article>
 
-          <!-- Service 3: Integrated Alignment Program (Featured) -->
-          <article class="service-card service-card--featured">
-            <div class="service-card__badge">Most comprehensive</div>
-            <div class="service-card__image">
-              <img src="/assets/images/service-integrated.jpg" alt="Integrated Alignment Program" width="400" height="240" loading="lazy">
+          <article class="workshops__tile workshops__tile--quick" id="sprint-retro">
+            <h4 class="workshops__tile-title">Sprint Retro</h4>
+            <p class="workshops__tile-tagline">A retro that actually works</p>
+            <span class="workshops__tile-duration">2-3 hrs</span>
+            <a href="/services/quick-sessions/sprint-retro" class="workshops__tile-link">More details &rarr;</a>
+          </article>
+
+          <article class="workshops__tile workshops__tile--quick" id="team-friction">
+            <svg class="workshops__tile-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+            <h4 class="workshops__tile-title">Team Friction</h4>
+            <p class="workshops__tile-tagline">Understand why they clash</p>
+            <span class="workshops__tile-duration">2-3 hrs</span>
+            <a href="/services/quick-sessions/team-friction" class="workshops__tile-link">More details &rarr;</a>
+          </article>
+
+          <article class="workshops__tile workshops__tile--quick" id="strategy-clarity">
+            <h4 class="workshops__tile-title">Strategy Clarity</h4>
+            <p class="workshops__tile-tagline">Translate strategy to action</p>
+            <span class="workshops__tile-duration">2-3 hrs</span>
+            <a href="/services/quick-sessions/strategy-clarity" class="workshops__tile-link">More details &rarr;</a>
+          </article>
+
+          <!-- ========== FULL-DAY WORKSHOPS (6-8 hrs) ========== -->
+          <a href="/services/full-day" class="workshops__category workshops__category--fullday">
+            <div>
+              <span class="workshops__category-badge">6-8 hours</span>
+              <h3 class="workshops__category-name"  style="color: white;">Full-Day Workshops</h3>
+              <p class="workshops__category-tagline">Deep-dive sessions for teams ready to build systems</p>
             </div>
-            <div class="service-card__content">
-              <h3 class="service-card__title">Integrated Alignment Program</h3>
-              <p class="service-card__subtitle">Both strategic clarity AND team performance</p>
+            <span class="workshops__category-link">Explore all &rarr;</span>
+            <svg class="workshops__category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+            </svg>
+          </a>
 
-              <ul class="service-card__features">
-                <li>Strategic facilitation + Strengths work</li>
-                <li>3-session structure over 8-12 weeks</li>
-                <li>Integration of strategy and people</li>
-              </ul>
+          <!-- Full-Day tiles -->
+          <article class="workshops__tile workshops__tile--fullday" id="quarterly-planning">
+            <h4 class="workshops__tile-title">Quarterly Planning</h4>
+            <p class="workshops__tile-tagline">Structure your next quarter</p>
+            <span class="workshops__tile-duration">6-8 hrs</span>
+            <a href="/services/full-day/quarterly-planning" class="workshops__tile-link">More details &rarr;</a>
+          </article>
 
-              <p class="service-card__description">Combined engagement showing how strategy connects to team dynamics</p>
+          <article class="workshops__tile workshops__tile--fullday" id="product-roadmap">
+            <svg class="workshops__tile-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+            </svg>
+            <h4 class="workshops__tile-title">Product Roadmap</h4>
+            <p class="workshops__tile-tagline">Align product direction</p>
+            <span class="workshops__tile-duration">6-8 hrs</span>
+            <a href="/services/full-day/product-roadmap" class="workshops__tile-link">More details &rarr;</a>
+          </article>
 
-              <div class="service-card__deliverables">
-                <strong>Deliverables:</strong>
-                <span>Full framework • Behavioral protocols • Follow-up support</span>
-              </div>
+          <article class="workshops__tile workshops__tile--fullday" id="team-operating-system">
+            <h4 class="workshops__tile-title">Team Operating System</h4>
+            <p class="workshops__tile-tagline">Build how your team runs</p>
+            <span class="workshops__tile-duration">6-8 hrs</span>
+            <a href="/services/full-day/team-operating-system" class="workshops__tile-link">More details &rarr;</a>
+          </article>
 
-              <a href="#contact" class="btn btn--primary">Learn More</a>
+          <article class="workshops__tile workshops__tile--fullday" id="team-kickoff">
+            <h4 class="workshops__tile-title">Team Kickoff</h4>
+            <p class="workshops__tile-tagline">New team, strong start</p>
+            <span class="workshops__tile-duration">6-8 hrs</span>
+            <a href="/services/full-day/team-kickoff" class="workshops__tile-link">More details &rarr;</a>
+          </article>
+
+          <article class="workshops__tile workshops__tile--fullday" id="performance-breakthrough">
+            <h4 class="workshops__tile-title">Performance Breakthrough</h4>
+            <p class="workshops__tile-tagline">Unlock stuck performance</p>
+            <span class="workshops__tile-duration">6-8 hrs</span>
+            <a href="/services/full-day/performance-breakthrough" class="workshops__tile-link">More details &rarr;</a>
+          </article>
+
+          <article class="workshops__tile workshops__tile--fullday" id="okr-alignment">
+            <h4 class="workshops__tile-title">OKR Alignment</h4>
+            <p class="workshops__tile-tagline">OKRs everyone commits to</p>
+            <span class="workshops__tile-duration">6-8 hrs</span>
+            <a href="/services/full-day/okr-alignment" class="workshops__tile-link">More details &rarr;</a>
+          </article>
+
+          <article class="workshops__tile workshops__tile--fullday" id="innovation-sprint">
+            <svg class="workshops__tile-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+            </svg>
+            <h4 class="workshops__tile-title">Innovation Sprint</h4>
+            <p class="workshops__tile-tagline">Breakthrough ideas in 2 days</p>
+            <span class="workshops__tile-duration">2 days</span>
+            <a href="/services/full-day/innovation-sprint" class="workshops__tile-link">More details &rarr;</a>
+          </article>
+
+          <!-- ========== GOA OFFSITE PACKAGES ========== -->
+          <a href="/services/goa-offsite" class="workshops__category workshops__category--offsite">
+            <div>
+              <span class="workshops__category-badge">Multi-day</span>
+              <h3 class="workshops__category-name">Goa Offsite Packages</h3>
+              <p class="workshops__category-tagline">Strategic retreats with full logistics handled</p>
             </div>
+            <span class="workshops__category-link">Explore all &rarr;</span>
+            <svg class="workshops__category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle>
+            </svg>
+          </a>
+
+          <!-- Goa Offsite tiles -->
+          <article class="workshops__tile workshops__tile--offsite" id="offsite-lite">
+            <h4 class="workshops__tile-title">Lite</h4>
+            <p class="workshops__tile-tagline">One session + insider recs</p>
+            <span class="workshops__tile-duration">1 day</span>
+            <a href="/services/goa-offsite/lite" class="workshops__tile-link">More details &rarr;</a>
+          </article>
+
+          <article class="workshops__tile workshops__tile--offsite" id="offsite-balanced">
+            <h4 class="workshops__tile-title">Balanced</h4>
+            <p class="workshops__tile-tagline">Two sessions + curated activities</p>
+            <span class="workshops__tile-duration">2 days</span>
+            <a href="/services/goa-offsite/balanced" class="workshops__tile-link">More details &rarr;</a>
+          </article>
+
+          <article class="workshops__tile workshops__tile--offsite" id="offsite-productive">
+            <h4 class="workshops__tile-title">Productive</h4>
+            <p class="workshops__tile-tagline">Morning sessions + full logistics</p>
+            <span class="workshops__tile-duration">3 days</span>
+            <a href="/services/goa-offsite/productive" class="workshops__tile-link">More details &rarr;</a>
+          </article>
+
+          <article class="workshops__tile workshops__tile--offsite" id="offsite-full">
+            <svg class="workshops__tile-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline>
+            </svg>
+            <h4 class="workshops__tile-title">Full Offsite</h4>
+            <p class="workshops__tile-tagline">Complete strategic retreat</p>
+            <span class="workshops__tile-duration">4-5 days</span>
+            <a href="/services/goa-offsite/full-offsite" class="workshops__tile-link">More details &rarr;</a>
           </article>
 
         </div>
-      </div>
 
+        <!-- Trust Indicators Row -->
+        <div class="workshops__trust" role="list">
+          <div class="workshops__trust-tile" role="listitem">
+            <span class="workshops__trust-stat">8+</span>
+            <span class="workshops__trust-label">Years facilitating teams</span>
+          </div>
+          <div class="workshops__trust-tile" role="listitem">
+            <span class="workshops__trust-stat">1000+</span>
+            <span class="workshops__trust-label">Professionals coached</span>
+          </div>
+          <div class="workshops__trust-tile" role="listitem">
+            <svg class="workshops__trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+            <span class="workshops__trust-stat">Gallup</span>
+            <span class="workshops__trust-label">Certified Strengths Coach</span>
+          </div>
+          <a href="#contact" class="workshops__trust-tile workshops__trust-tile--cta" role="listitem">
+            <span class="workshops__trust-cta-text">Book a 30-min call</span>
+            <span class="workshops__trust-cta-arrow">&rarr;</span>
+          </a>
+        </div>
+
+      </div>
     </section>
 
     <!-- PROCESS/HOW IT WORKS SECTION -->

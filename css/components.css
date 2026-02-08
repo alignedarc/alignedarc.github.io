@@ -110,7 +110,7 @@
   gap: var(--space-md);
   white-space: nowrap;
   width: max-content;
-  padding: 0px;
+  padding: 5px;
 }
 
 .nav__logo {
