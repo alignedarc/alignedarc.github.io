@@ -199,268 +199,192 @@
     </section>
     
 
-    <!-- WORKSHOPS BENTO GRID SECTION -->
-    <section class="workshops" id="services">
-      <div class="container container--wide">
-        <h2 class="section-title">Which Workshop Do You Need?</h2>
-        <p class="section-subtitle">Pick based on timeline and scope</p>
+    <!-- SERVICES SECTION -->
+    <section class="services" id="services">
+      <div class="container">
+        <h2 class="section-title">Services</h2>
+        <p class="section-subtitle">Strategic facilitation in three modes, built to match your team's urgency and depth.</p>
+      </div>
 
-        <div class="workshops__lanes">
+      <div class="services__tabs container--full" role="tablist" aria-label="Service categories">
+        <button class="services__tab services__tab--quick is-active" id="services-tab-quick" role="tab" aria-selected="true" aria-controls="services-panel-quick" data-accent="var(--color-yellow)" data-accent-soft="rgba(236, 206, 0, 0.14)">
+          <span class="services__tab-label">Quick Sessions</span>
+          <span class="services__tab-meta">2-3 hours • focused alignment sprints</span>
+        </button>
+        <button class="services__tab services__tab--fullday" id="services-tab-fullday" role="tab" aria-selected="false" aria-controls="services-panel-fullday" data-accent="var(--color-cyan)" data-accent-soft="rgba(3, 167, 145, 0.12)">
+          <span class="services__tab-label">Full-Day Workshops</span>
+          <span class="services__tab-meta">6-8 hours • deep operating resets</span>
+        </button>
+        <button class="services__tab services__tab--offsite" id="services-tab-offsite" role="tab" aria-selected="false" aria-controls="services-panel-offsite" data-accent="var(--color-pink)" data-accent-soft="rgba(208, 159, 166, 0.16)">
+          <span class="services__tab-label">Goa Offsite Packages</span>
+          <span class="services__tab-meta">Multi-day • strategic team retreats</span>
+        </button>
+      </div>
 
-          <!-- ========== QUICK SESSIONS LANE ========== -->
-          <div class="workshops__lane workshops__lane--quick">
-            <a href="/services/quick-sessions" class="workshops__lane-header workshops__lane-header--quick">
-              <span class="workshops__lane-badge">2-3 hours</span>
-              <h3 class="workshops__lane-name">Quick Sessions</h3>
-              <p class="workshops__lane-tagline">Focused sprints for teams that need clarity fast</p>
-              <span class="workshops__lane-link">Explore all &rarr;</span>
-              <svg class="workshops__lane-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
-              </svg>
-            </a>
-
-            <div class="workshops__lane-carousel">
-              <button class="workshops__lane-prev" aria-label="Previous cards">&lsaquo;</button>
-              <div class="workshops__lane-viewport">
-                <div class="workshops__lane-track">
-
-                  <article class="workshops__card workshops__card--quick" id="decision-accelerator">
-                    <svg class="workshops__card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
-                    </svg>
-                    <h4 class="workshops__card-title">Decision Accelerator</h4>
-                    <p class="workshops__card-tagline">Make stuck decisions fast</p>
-                    <span class="workshops__card-duration">2-3 hrs</span>
-                    <a href="/services/quick-sessions/decision-accelerator" class="workshops__card-link">More details &rarr;</a>
-                  </article>
-
-                  <article class="workshops__card workshops__card--quick" id="priority-reset">
-                    <svg class="workshops__card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle>
-                    </svg>
-                    <h4 class="workshops__card-title">Priority Reset</h4>
-                    <p class="workshops__card-tagline">Align on top 3 priorities</p>
-                    <span class="workshops__card-duration">2-3 hrs</span>
-                    <a href="/services/quick-sessions/priority-reset" class="workshops__card-link">More details &rarr;</a>
-                  </article>
-
-                  <article class="workshops__card workshops__card--quick" id="sprint-retro">
-                    <svg class="workshops__card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <polyline points="1 4 1 10 7 10"></polyline><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path>
-                    </svg>
-                    <h4 class="workshops__card-title">Sprint Retro</h4>
-                    <p class="workshops__card-tagline">A retro that actually works</p>
-                    <span class="workshops__card-duration">2-3 hrs</span>
-                    <a href="/services/quick-sessions/sprint-retro" class="workshops__card-link">More details &rarr;</a>
-                  </article>
-
-                  <article class="workshops__card workshops__card--quick" id="team-friction">
-                    <svg class="workshops__card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                    </svg>
-                    <h4 class="workshops__card-title">Team Friction</h4>
-                    <p class="workshops__card-tagline">Understand why they clash</p>
-                    <span class="workshops__card-duration">2-3 hrs</span>
-                    <a href="/services/quick-sessions/team-friction" class="workshops__card-link">More details &rarr;</a>
-                  </article>
-
-                  <article class="workshops__card workshops__card--quick" id="strategy-clarity">
-                    <svg class="workshops__card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
-                    </svg>
-                    <h4 class="workshops__card-title">Strategy Clarity</h4>
-                    <p class="workshops__card-tagline">Translate strategy to action</p>
-                    <span class="workshops__card-duration">2-3 hrs</span>
-                    <a href="/services/quick-sessions/strategy-clarity" class="workshops__card-link">More details &rarr;</a>
-                  </article>
-
+      <div class="services__canvas" data-services-canvas>
+        <div class="services__canvas-inner container">
+          <div class="services__panels">
+            <div class="services__panel services__panel--quick is-active" id="services-panel-quick" role="tabpanel" aria-labelledby="services-tab-quick" aria-hidden="false">
+              <div class="services__panel-header">
+                <div>
+                  <p class="services__eyebrow">Quick Sessions</p>
+                  <h3 class="services__panel-title">Fast alignment for decisions that keep looping.</h3>
                 </div>
+                <div class="services__panel-pill">2-3 hours</div>
               </div>
-              <button class="workshops__lane-next" aria-label="Next cards">&rsaquo;</button>
+              <div class="services__panel-grid">
+                <article class="services__workshop-card">
+                  <p class="services__workshop-tag">Decision</p>
+                  <h4 class="services__workshop-title">Decision Accelerator</h4>
+                  <p class="services__workshop-desc">Make stuck decisions fast in a focused 2-3 hour session.</p>
+                </article>
+                <article class="services__workshop-card">
+                  <p class="services__workshop-tag">Priority</p>
+                  <h4 class="services__workshop-title">Priority Reset</h4>
+                  <p class="services__workshop-desc">Align your team on the top 3 priorities and the tradeoffs.</p>
+                </article>
+                <article class="services__workshop-card">
+                  <p class="services__workshop-tag">Retro</p>
+                  <h4 class="services__workshop-title">Sprint Retro</h4>
+                  <p class="services__workshop-desc">A retrospective format that actually drives change.</p>
+                </article>
+                <article class="services__workshop-card">
+                  <p class="services__workshop-tag">Dynamics</p>
+                  <h4 class="services__workshop-title">Team Friction</h4>
+                  <p class="services__workshop-desc">Understand why team members clash and build collaboration.</p>
+                </article>
+                <article class="services__workshop-card">
+                  <p class="services__workshop-tag">Strategy</p>
+                  <h4 class="services__workshop-title">Strategy Clarity</h4>
+                  <p class="services__workshop-desc">Translate high-level strategy into actionable steps.</p>
+                </article>
+              </div>
+            </div>
+
+            <div class="services__panel services__panel--fullday" id="services-panel-fullday" role="tabpanel" aria-labelledby="services-tab-fullday" aria-hidden="true">
+              <div class="services__panel-header">
+                <div>
+                  <p class="services__eyebrow">Full-Day Workshops</p>
+                  <h3 class="services__panel-title">Deep work to reset how the team operates.</h3>
+                </div>
+                <div class="services__panel-pill">6-8 hours</div>
+              </div>
+              <div class="services__panel-split">
+                <div class="services__panel-content">
+                  <p>Designed for leadership teams ready to clarify ownership, align stakeholders, and leave with frameworks that stick.</p>
+                  <ul class="services__outcomes">
+                    <li>Clear goals, owners, and decision rights.</li>
+                    <li>Shared language for priorities and tradeoffs.</li>
+                    <li>Action plans with momentum built in.</li>
+                  </ul>
+                </div>
+                <ol class="services__rail">
+                  <li class="services__rail-item">
+                    <span class="services__rail-index">01</span>
+                    <div>
+                      <h4>Quarterly Planning</h4>
+                      <p>Structure your next quarter with clear goals and owners.</p>
+                    </div>
+                  </li>
+                  <li class="services__rail-item">
+                    <span class="services__rail-index">02</span>
+                    <div>
+                      <h4>Product Roadmap</h4>
+                      <p>Align product direction across stakeholders.</p>
+                    </div>
+                  </li>
+                  <li class="services__rail-item">
+                    <span class="services__rail-index">03</span>
+                    <div>
+                      <h4>Team Operating System</h4>
+                      <p>Build how your team runs day-to-day.</p>
+                    </div>
+                  </li>
+                  <li class="services__rail-item">
+                    <span class="services__rail-index">04</span>
+                    <div>
+                      <h4>Team Kickoff</h4>
+                      <p>New team, strong start with shared norms.</p>
+                    </div>
+                  </li>
+                  <li class="services__rail-item">
+                    <span class="services__rail-index">05</span>
+                    <div>
+                      <h4>Performance Breakthrough</h4>
+                      <p>Unlock stuck performance with targeted frameworks.</p>
+                    </div>
+                  </li>
+                  <li class="services__rail-item">
+                    <span class="services__rail-index">06</span>
+                    <div>
+                      <h4>OKR Alignment</h4>
+                      <p>OKRs everyone understands and commits to.</p>
+                    </div>
+                  </li>
+                  <li class="services__rail-item">
+                    <span class="services__rail-index">07</span>
+                    <div>
+                      <h4>Innovation Sprint</h4>
+                      <p>Breakthrough ideas in a 2-day intensive sprint.</p>
+                    </div>
+                  </li>
+                </ol>
+              </div>
+            </div>
+
+            <div class="services__panel services__panel--offsite" id="services-panel-offsite" role="tabpanel" aria-labelledby="services-tab-offsite" aria-hidden="true">
+              <div class="services__panel-header">
+                <div>
+                  <p class="services__eyebrow">Goa Offsite Packages</p>
+                  <h3 class="services__panel-title">Strategic retreats with thoughtful pacing and full logistics.</h3>
+                </div>
+                <div class="services__panel-pill">Multi-day</div>
+              </div>
+              <div class="services__packages">
+                <article class="services__package-card">
+                  <p class="services__package-label">Lite</p>
+                  <h4 class="services__package-title">Lite</h4>
+                  <p class="services__package-desc">One facilitated session plus insider local recommendations.</p>
+                  <ul class="services__package-features">
+                    <li>Single strategic session</li>
+                    <li>Local planning guide</li>
+                    <li>Light logistics support</li>
+                  </ul>
+                </article>
+                <article class="services__package-card">
+                  <p class="services__package-label">Balanced</p>
+                  <h4 class="services__package-title">Balanced</h4>
+                  <p class="services__package-desc">Two sessions plus curated team activities.</p>
+                  <ul class="services__package-features">
+                    <li>Two facilitated sessions</li>
+                    <li>Team experience curation</li>
+                    <li>Shared alignment outputs</li>
+                  </ul>
+                </article>
+                <article class="services__package-card">
+                  <p class="services__package-label">Productive</p>
+                  <h4 class="services__package-title">Productive</h4>
+                  <p class="services__package-desc">Morning sessions with full logistics handled.</p>
+                  <ul class="services__package-features">
+                    <li>Daily working blocks</li>
+                    <li>Dedicated coordination</li>
+                    <li>Evenings open for team time</li>
+                  </ul>
+                </article>
+                <article class="services__package-card">
+                  <p class="services__package-label">Full Offsite</p>
+                  <h4 class="services__package-title">Full Offsite</h4>
+                  <p class="services__package-desc">Complete multi-day strategic retreat in Goa.</p>
+                  <ul class="services__package-features">
+                    <li>Multi-session program design</li>
+                    <li>End-to-end logistics</li>
+                    <li>Executive-ready outcomes</li>
+                  </ul>
+                </article>
+              </div>
             </div>
           </div>
-
-          <!-- ========== FULL-DAY WORKSHOPS LANE ========== -->
-          <div class="workshops__lane workshops__lane--fullday">
-            <a href="/services/full-day" class="workshops__lane-header workshops__lane-header--fullday">
-              <span class="workshops__lane-badge">6-8 hours</span>
-              <h3 class="workshops__lane-name">Full-Day Workshops</h3>
-              <p class="workshops__lane-tagline">Deep-dive sessions for teams ready to build systems</p>
-              <span class="workshops__lane-link">Explore all &rarr;</span>
-              <svg class="workshops__lane-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
-              </svg>
-            </a>
-
-            <div class="workshops__lane-carousel">
-              <button class="workshops__lane-prev" aria-label="Previous cards">&lsaquo;</button>
-              <div class="workshops__lane-viewport">
-                <div class="workshops__lane-track">
-
-                  <article class="workshops__card workshops__card--fullday" id="quarterly-planning">
-                    <svg class="workshops__card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line>
-                    </svg>
-                    <h4 class="workshops__card-title">Quarterly Planning</h4>
-                    <p class="workshops__card-tagline">Structure your next quarter</p>
-                    <span class="workshops__card-duration">6-8 hrs</span>
-                    <a href="/services/full-day/quarterly-planning" class="workshops__card-link">More details &rarr;</a>
-                  </article>
-
-                  <article class="workshops__card workshops__card--fullday" id="product-roadmap">
-                    <svg class="workshops__card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
-                    </svg>
-                    <h4 class="workshops__card-title">Product Roadmap</h4>
-                    <p class="workshops__card-tagline">Align product direction</p>
-                    <span class="workshops__card-duration">6-8 hrs</span>
-                    <a href="/services/full-day/product-roadmap" class="workshops__card-link">More details &rarr;</a>
-                  </article>
-
-                  <article class="workshops__card workshops__card--fullday" id="team-operating-system">
-                    <svg class="workshops__card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline>
-                    </svg>
-                    <h4 class="workshops__card-title">Team Operating System</h4>
-                    <p class="workshops__card-tagline">Build how your team runs</p>
-                    <span class="workshops__card-duration">6-8 hrs</span>
-                    <a href="/services/full-day/team-operating-system" class="workshops__card-link">More details &rarr;</a>
-                  </article>
-
-                  <article class="workshops__card workshops__card--fullday" id="team-kickoff">
-                    <svg class="workshops__card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line>
-                    </svg>
-                    <h4 class="workshops__card-title">Team Kickoff</h4>
-                    <p class="workshops__card-tagline">New team, strong start</p>
-                    <span class="workshops__card-duration">6-8 hrs</span>
-                    <a href="/services/full-day/team-kickoff" class="workshops__card-link">More details &rarr;</a>
-                  </article>
-
-                  <article class="workshops__card workshops__card--fullday" id="performance-breakthrough">
-                    <svg class="workshops__card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline>
-                    </svg>
-                    <h4 class="workshops__card-title">Performance Breakthrough</h4>
-                    <p class="workshops__card-tagline">Unlock stuck performance</p>
-                    <span class="workshops__card-duration">6-8 hrs</span>
-                    <a href="/services/full-day/performance-breakthrough" class="workshops__card-link">More details &rarr;</a>
-                  </article>
-
-                  <article class="workshops__card workshops__card--fullday" id="okr-alignment">
-                    <svg class="workshops__card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <circle cx="12" cy="12" r="10"></circle><line x1="22" y1="12" x2="18" y2="12"></line><line x1="6" y1="12" x2="2" y2="12"></line><line x1="12" y1="6" x2="12" y2="2"></line><line x1="12" y1="22" x2="12" y2="18"></line>
-                    </svg>
-                    <h4 class="workshops__card-title">OKR Alignment</h4>
-                    <p class="workshops__card-tagline">OKRs everyone commits to</p>
-                    <span class="workshops__card-duration">6-8 hrs</span>
-                    <a href="/services/full-day/okr-alignment" class="workshops__card-link">More details &rarr;</a>
-                  </article>
-
-                  <article class="workshops__card workshops__card--fullday" id="innovation-sprint">
-                    <svg class="workshops__card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-                    </svg>
-                    <h4 class="workshops__card-title">Innovation Sprint</h4>
-                    <p class="workshops__card-tagline">Breakthrough ideas in 2 days</p>
-                    <span class="workshops__card-duration">2 days</span>
-                    <a href="/services/full-day/innovation-sprint" class="workshops__card-link">More details &rarr;</a>
-                  </article>
-
-                </div>
-              </div>
-              <button class="workshops__lane-next" aria-label="Next cards">&rsaquo;</button>
-            </div>
-          </div>
-
-          <!-- ========== GOA OFFSITE LANE ========== -->
-          <div class="workshops__lane workshops__lane--offsite">
-            <a href="/services/goa-offsite" class="workshops__lane-header workshops__lane-header--offsite">
-              <span class="workshops__lane-badge">Multi-day</span>
-              <h3 class="workshops__lane-name">Goa Offsite Packages</h3>
-              <p class="workshops__lane-tagline">Strategic retreats with full logistics handled</p>
-              <span class="workshops__lane-link">Explore all &rarr;</span>
-              <svg class="workshops__lane-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle>
-              </svg>
-            </a>
-
-            <div class="workshops__lane-carousel">
-              <button class="workshops__lane-prev" aria-label="Previous cards">&lsaquo;</button>
-              <div class="workshops__lane-viewport">
-                <div class="workshops__lane-track">
-
-                  <article class="workshops__card workshops__card--offsite" id="offsite-lite">
-                    <svg class="workshops__card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line>
-                    </svg>
-                    <h4 class="workshops__card-title">Lite</h4>
-                    <p class="workshops__card-tagline">One session + insider recs</p>
-                    <span class="workshops__card-duration">1 day</span>
-                    <a href="/services/goa-offsite/lite" class="workshops__card-link">More details &rarr;</a>
-                  </article>
-
-                  <article class="workshops__card workshops__card--offsite" id="offsite-balanced">
-                    <svg class="workshops__card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <line x1="4" y1="21" x2="4" y2="14"></line><line x1="4" y1="10" x2="4" y2="3"></line><line x1="12" y1="21" x2="12" y2="12"></line><line x1="12" y1="8" x2="12" y2="3"></line><line x1="20" y1="21" x2="20" y2="16"></line><line x1="20" y1="12" x2="20" y2="3"></line><line x1="1" y1="14" x2="7" y2="14"></line><line x1="9" y1="8" x2="15" y2="8"></line><line x1="17" y1="16" x2="23" y2="16"></line>
-                    </svg>
-                    <h4 class="workshops__card-title">Balanced</h4>
-                    <p class="workshops__card-tagline">Two sessions + curated activities</p>
-                    <span class="workshops__card-duration">2 days</span>
-                    <a href="/services/goa-offsite/balanced" class="workshops__card-link">More details &rarr;</a>
-                  </article>
-
-                  <article class="workshops__card workshops__card--offsite" id="offsite-productive">
-                    <svg class="workshops__card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
-                    </svg>
-                    <h4 class="workshops__card-title">Productive</h4>
-                    <p class="workshops__card-tagline">Morning sessions + full logistics</p>
-                    <span class="workshops__card-duration">3 days</span>
-                    <a href="/services/goa-offsite/productive" class="workshops__card-link">More details &rarr;</a>
-                  </article>
-
-                  <article class="workshops__card workshops__card--offsite" id="offsite-full">
-                    <svg class="workshops__card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                      <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline>
-                    </svg>
-                    <h4 class="workshops__card-title">Full Offsite</h4>
-                    <p class="workshops__card-tagline">Complete strategic retreat</p>
-                    <span class="workshops__card-duration">4-5 days</span>
-                    <a href="/services/goa-offsite/full-offsite" class="workshops__card-link">More details &rarr;</a>
-                  </article>
-
-                </div>
-              </div>
-              <button class="workshops__lane-next" aria-label="Next cards">&rsaquo;</button>
-            </div>
-          </div>
-
         </div>
-
-        <!-- Trust Indicators Row -->
-        <div class="workshops__trust" role="list">
-          <div class="workshops__trust-tile" role="listitem">
-            <span class="workshops__trust-stat">8+</span>
-            <span class="workshops__trust-label">Years facilitating teams</span>
-          </div>
-          <div class="workshops__trust-tile" role="listitem">
-            <span class="workshops__trust-stat">1000+</span>
-            <span class="workshops__trust-label">Professionals coached</span>
-          </div>
-          <div class="workshops__trust-tile" role="listitem">
-            <svg class="workshops__trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline>
-            </svg>
-            <span class="workshops__trust-stat">Gallup</span>
-            <span class="workshops__trust-label">Certified Strengths Coach</span>
-          </div>
-          <a href="#contact" class="workshops__trust-tile workshops__trust-tile--cta" role="listitem">
-            <span class="workshops__trust-cta-text">Book a 30-min call</span>
-            <span class="workshops__trust-cta-arrow">&rarr;</span>
-          </a>
-        </div>
-
       </div>
     </section>
 
@@ -804,6 +728,7 @@
   <script src="/js/hero-scroll.js"></script>
   <script src="/js/accordion.js"></script>
   <script src="/js/impact-carousel.js"></script>
+  <script src="/js/services-tabs.js"></script>
   <script src="/js/workshops-carousel.js"></script>
   <script src="/js/form-handler.js"></script>
 </body>
