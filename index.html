@@ -201,24 +201,41 @@
 
     <!-- SERVICES SECTION -->
     <section class="services" id="services">
-      <div class="container">
-        <h2 class="section-title">Services</h2>
-        <p class="section-subtitle">Strategic facilitation in three modes, built to match your team's urgency and depth.</p>
+      <div class="services__caption">
+        <div class="services__caption-track" aria-label="Strategic facilitation in three modes, built to match your team's urgency and depth.">
+          <span class="services__caption-text">Strategic facilitation in three modes, built to match your team's urgency and depth.</span>
+          <span class="services__caption-text" aria-hidden="true">Strategic facilitation in three modes, built to match your team's urgency and depth.</span>
+        </div>
       </div>
 
       <div class="services__tabs container--full" role="tablist" aria-label="Service categories">
-        <button class="services__tab services__tab--quick is-active" id="services-tab-quick" role="tab" aria-selected="true" aria-controls="services-panel-quick" data-accent="var(--color-yellow)" data-accent-soft="rgba(236, 206, 0, 0.14)">
-          <span class="services__tab-label">Quick Sessions</span>
-          <span class="services__tab-meta">2-3 hours • focused alignment sprints</span>
-        </button>
-        <button class="services__tab services__tab--fullday" id="services-tab-fullday" role="tab" aria-selected="false" aria-controls="services-panel-fullday" data-accent="var(--color-cyan)" data-accent-soft="rgba(3, 167, 145, 0.12)">
-          <span class="services__tab-label">Full-Day Workshops</span>
-          <span class="services__tab-meta">6-8 hours • deep operating resets</span>
-        </button>
-        <button class="services__tab services__tab--offsite" id="services-tab-offsite" role="tab" aria-selected="false" aria-controls="services-panel-offsite" data-accent="var(--color-pink)" data-accent-soft="rgba(208, 159, 166, 0.16)">
-          <span class="services__tab-label">Goa Offsite Packages</span>
-          <span class="services__tab-meta">Multi-day • strategic team retreats</span>
-        </button>
+        <div class="services__tab-wrap services__tab-wrap--quick">
+          <button class="services__tab services__tab--quick is-active" id="services-tab-quick" role="tab" aria-selected="true" aria-controls="services-panel-quick" data-accent="var(--color-yellow)" data-accent-soft=var(--color-yellow) data-ink="var(--color-charcoal)">
+            <span class="services__tab-label">Quick Sessions</span>
+            <span class="services__tab-meta">
+              <span class="services__tab-desc">Focused alignment sprints</span>
+              <span class="services__tab-pill">2-3 hours</span>
+            </span>
+          </button>
+        </div>
+        <div class="services__tab-wrap services__tab-wrap--fullday">
+          <button class="services__tab services__tab--fullday" id="services-tab-fullday" role="tab" aria-selected="false" aria-controls="services-panel-fullday" data-accent="var(--color-cyan)" data-accent-soft="var(--color-cyan)" data-ink="white">
+            <span class="services__tab-label">Full-Day Workshops</span>
+            <span class="services__tab-meta">
+              <span class="services__tab-desc">Deep operating resets</span>
+              <span class="services__tab-pill">6-8 hours</span>
+            </span>
+          </button>
+        </div>
+        <div class="services__tab-wrap services__tab-wrap--offsite">
+          <button class="services__tab services__tab--offsite" id="services-tab-offsite" role="tab" aria-selected="false" aria-controls="services-panel-offsite" data-accent="var(--color-pink)" data-accent-soft="var(--color-pink)" data-ink="var(--color-charcoal)">
+            <span class="services__tab-label">Goa Offsite Packages</span>
+            <span class="services__tab-meta">
+              <span class="services__tab-desc">Strategic team retreats</span>
+              <span class="services__tab-pill">Multi-day</span>
+            </span>
+          </button>
+        </div>
       </div>
 
       <div class="services__canvas" data-services-canvas>
@@ -232,32 +249,52 @@
                 </div>
                 <div class="services__panel-pill">2-3 hours</div>
               </div>
-              <div class="services__panel-grid">
-                <article class="services__workshop-card">
-                  <p class="services__workshop-tag">Decision</p>
-                  <h4 class="services__workshop-title">Decision Accelerator</h4>
-                  <p class="services__workshop-desc">Make stuck decisions fast in a focused 2-3 hour session.</p>
-                </article>
-                <article class="services__workshop-card">
-                  <p class="services__workshop-tag">Priority</p>
-                  <h4 class="services__workshop-title">Priority Reset</h4>
-                  <p class="services__workshop-desc">Align your team on the top 3 priorities and the tradeoffs.</p>
-                </article>
-                <article class="services__workshop-card">
-                  <p class="services__workshop-tag">Retro</p>
-                  <h4 class="services__workshop-title">Sprint Retro</h4>
-                  <p class="services__workshop-desc">A retrospective format that actually drives change.</p>
-                </article>
-                <article class="services__workshop-card">
-                  <p class="services__workshop-tag">Dynamics</p>
-                  <h4 class="services__workshop-title">Team Friction</h4>
-                  <p class="services__workshop-desc">Understand why team members clash and build collaboration.</p>
-                </article>
-                <article class="services__workshop-card">
-                  <p class="services__workshop-tag">Strategy</p>
-                  <h4 class="services__workshop-title">Strategy Clarity</h4>
-                  <p class="services__workshop-desc">Translate high-level strategy into actionable steps.</p>
-                </article>
+              <div class="services__carousel" aria-label="Quick sessions carousel">
+                <button class="services__carousel-btn services__carousel-btn--prev" type="button" aria-label="Previous workshops">
+                  <span aria-hidden="true">‹</span>
+                </button>
+                <div class="services__carousel-viewport">
+                  <div class="services__carousel-track">
+                    <article class="services__workshop-card">
+                      <p class="services__workshop-tag">Decision</p>
+                      <h4 class="services__workshop-title">Decision Accelerator</h4>
+                      <p class="services__workshop-duration">2-3 hours</p>
+                      <p class="services__workshop-desc">Make stuck decisions fast in a focused 2-3 hour session.</p>
+                      <a class="services__workshop-link" href="/services/decision-accelerator">More details</a>
+                    </article>
+                    <article class="services__workshop-card">
+                      <p class="services__workshop-tag">Priority</p>
+                      <h4 class="services__workshop-title">Priority Reset</h4>
+                      <p class="services__workshop-duration">2-3 hours</p>
+                      <p class="services__workshop-desc">Align your team on the top 3 priorities and the tradeoffs.</p>
+                      <a class="services__workshop-link" href="/services/priority-reset">More details</a>
+                    </article>
+                    <article class="services__workshop-card">
+                      <p class="services__workshop-tag">Retro</p>
+                      <h4 class="services__workshop-title">Sprint Retro</h4>
+                      <p class="services__workshop-duration">2-3 hours</p>
+                      <p class="services__workshop-desc">A retrospective format that actually drives change.</p>
+                      <a class="services__workshop-link" href="/services/sprint-retro">More details</a>
+                    </article>
+                    <article class="services__workshop-card">
+                      <p class="services__workshop-tag">Dynamics</p>
+                      <h4 class="services__workshop-title">Team Friction</h4>
+                      <p class="services__workshop-duration">2-3 hours</p>
+                      <p class="services__workshop-desc">Understand why team members clash and build collaboration.</p>
+                      <a class="services__workshop-link" href="/services/team-friction">More details</a>
+                    </article>
+                    <article class="services__workshop-card">
+                      <p class="services__workshop-tag">Strategy</p>
+                      <h4 class="services__workshop-title">Strategy Clarity</h4>
+                      <p class="services__workshop-duration">2-3 hours</p>
+                      <p class="services__workshop-desc">Translate high-level strategy into actionable steps.</p>
+                      <a class="services__workshop-link" href="/services/strategy-clarity">More details</a>
+                    </article>
+                  </div>
+                </div>
+                <button class="services__carousel-btn services__carousel-btn--next" type="button" aria-label="Next workshops">
+                  <span aria-hidden="true">›</span>
+                </button>
               </div>
             </div>
 
@@ -269,66 +306,66 @@
                 </div>
                 <div class="services__panel-pill">6-8 hours</div>
               </div>
-              <div class="services__panel-split">
-                <div class="services__panel-content">
-                  <p>Designed for leadership teams ready to clarify ownership, align stakeholders, and leave with frameworks that stick.</p>
-                  <ul class="services__outcomes">
-                    <li>Clear goals, owners, and decision rights.</li>
-                    <li>Shared language for priorities and tradeoffs.</li>
-                    <li>Action plans with momentum built in.</li>
-                  </ul>
+              <div class="services__carousel" aria-label="Full-day workshops carousel">
+                <button class="services__carousel-btn services__carousel-btn--prev" type="button" aria-label="Previous workshops">
+                  <span aria-hidden="true">‹</span>
+                </button>
+                <div class="services__carousel-viewport">
+                  <div class="services__carousel-track">
+                    <article class="services__workshop-card">
+                      <p class="services__workshop-tag">Planning</p>
+                      <h4 class="services__workshop-title">Quarterly Planning</h4>
+                      <p class="services__workshop-duration">6-8 hours</p>
+                      <p class="services__workshop-desc">Structure your next quarter with clear goals and owners.</p>
+                      <a class="services__workshop-link" href="/services/quarterly-planning">More details</a>
+                    </article>
+                    <article class="services__workshop-card">
+                      <p class="services__workshop-tag">Roadmap</p>
+                      <h4 class="services__workshop-title">Product Roadmap</h4>
+                      <p class="services__workshop-duration">6-8 hours</p>
+                      <p class="services__workshop-desc">Align product direction across stakeholders.</p>
+                      <a class="services__workshop-link" href="/services/product-roadmap">More details</a>
+                    </article>
+                    <article class="services__workshop-card">
+                      <p class="services__workshop-tag">Operating</p>
+                      <h4 class="services__workshop-title">Team Operating System</h4>
+                      <p class="services__workshop-duration">6-8 hours</p>
+                      <p class="services__workshop-desc">Build how your team runs day-to-day.</p>
+                      <a class="services__workshop-link" href="/services/team-operating-system">More details</a>
+                    </article>
+                    <article class="services__workshop-card">
+                      <p class="services__workshop-tag">Kickoff</p>
+                      <h4 class="services__workshop-title">Team Kickoff</h4>
+                      <p class="services__workshop-duration">6-8 hours</p>
+                      <p class="services__workshop-desc">New team, strong start with shared norms.</p>
+                      <a class="services__workshop-link" href="/services/team-kickoff">More details</a>
+                    </article>
+                    <article class="services__workshop-card">
+                      <p class="services__workshop-tag">Performance</p>
+                      <h4 class="services__workshop-title">Performance Breakthrough</h4>
+                      <p class="services__workshop-duration">6-8 hours</p>
+                      <p class="services__workshop-desc">Unlock stuck performance with targeted frameworks.</p>
+                      <a class="services__workshop-link" href="/services/performance-breakthrough">More details</a>
+                    </article>
+                    <article class="services__workshop-card">
+                      <p class="services__workshop-tag">OKR</p>
+                      <h4 class="services__workshop-title">OKR Alignment</h4>
+                      <p class="services__workshop-duration">6-8 hours</p>
+                      <p class="services__workshop-desc">OKRs everyone understands and commits to.</p>
+                      <a class="services__workshop-link" href="/services/okr-alignment">More details</a>
+                    </article>
+                    <article class="services__workshop-card">
+                      <p class="services__workshop-tag">Innovation</p>
+                      <h4 class="services__workshop-title">Innovation Sprint</h4>
+                      <p class="services__workshop-duration">6-8 hours</p>
+                      <p class="services__workshop-desc">Breakthrough ideas in a 2-day intensive sprint.</p>
+                      <a class="services__workshop-link" href="/services/innovation-sprint">More details</a>
+                    </article>
+                  </div>
                 </div>
-                <ol class="services__rail">
-                  <li class="services__rail-item">
-                    <span class="services__rail-index">01</span>
-                    <div>
-                      <h4>Quarterly Planning</h4>
-                      <p>Structure your next quarter with clear goals and owners.</p>
-                    </div>
-                  </li>
-                  <li class="services__rail-item">
-                    <span class="services__rail-index">02</span>
-                    <div>
-                      <h4>Product Roadmap</h4>
-                      <p>Align product direction across stakeholders.</p>
-                    </div>
-                  </li>
-                  <li class="services__rail-item">
-                    <span class="services__rail-index">03</span>
-                    <div>
-                      <h4>Team Operating System</h4>
-                      <p>Build how your team runs day-to-day.</p>
-                    </div>
-                  </li>
-                  <li class="services__rail-item">
-                    <span class="services__rail-index">04</span>
-                    <div>
-                      <h4>Team Kickoff</h4>
-                      <p>New team, strong start with shared norms.</p>
-                    </div>
-                  </li>
-                  <li class="services__rail-item">
-                    <span class="services__rail-index">05</span>
-                    <div>
-                      <h4>Performance Breakthrough</h4>
-                      <p>Unlock stuck performance with targeted frameworks.</p>
-                    </div>
-                  </li>
-                  <li class="services__rail-item">
-                    <span class="services__rail-index">06</span>
-                    <div>
-                      <h4>OKR Alignment</h4>
-                      <p>OKRs everyone understands and commits to.</p>
-                    </div>
-                  </li>
-                  <li class="services__rail-item">
-                    <span class="services__rail-index">07</span>
-                    <div>
-                      <h4>Innovation Sprint</h4>
-                      <p>Breakthrough ideas in a 2-day intensive sprint.</p>
-                    </div>
-                  </li>
-                </ol>
+                <button class="services__carousel-btn services__carousel-btn--next" type="button" aria-label="Next workshops">
+                  <span aria-hidden="true">›</span>
+                </button>
               </div>
             </div>
 
@@ -340,47 +377,45 @@
                 </div>
                 <div class="services__panel-pill">Multi-day</div>
               </div>
-              <div class="services__packages">
-                <article class="services__package-card">
-                  <p class="services__package-label">Lite</p>
-                  <h4 class="services__package-title">Lite</h4>
-                  <p class="services__package-desc">One facilitated session plus insider local recommendations.</p>
-                  <ul class="services__package-features">
-                    <li>Single strategic session</li>
-                    <li>Local planning guide</li>
-                    <li>Light logistics support</li>
-                  </ul>
-                </article>
-                <article class="services__package-card">
-                  <p class="services__package-label">Balanced</p>
-                  <h4 class="services__package-title">Balanced</h4>
-                  <p class="services__package-desc">Two sessions plus curated team activities.</p>
-                  <ul class="services__package-features">
-                    <li>Two facilitated sessions</li>
-                    <li>Team experience curation</li>
-                    <li>Shared alignment outputs</li>
-                  </ul>
-                </article>
-                <article class="services__package-card">
-                  <p class="services__package-label">Productive</p>
-                  <h4 class="services__package-title">Productive</h4>
-                  <p class="services__package-desc">Morning sessions with full logistics handled.</p>
-                  <ul class="services__package-features">
-                    <li>Daily working blocks</li>
-                    <li>Dedicated coordination</li>
-                    <li>Evenings open for team time</li>
-                  </ul>
-                </article>
-                <article class="services__package-card">
-                  <p class="services__package-label">Full Offsite</p>
-                  <h4 class="services__package-title">Full Offsite</h4>
-                  <p class="services__package-desc">Complete multi-day strategic retreat in Goa.</p>
-                  <ul class="services__package-features">
-                    <li>Multi-session program design</li>
-                    <li>End-to-end logistics</li>
-                    <li>Executive-ready outcomes</li>
-                  </ul>
-                </article>
+              <div class="services__carousel" aria-label="Goa offsite packages carousel">
+                <button class="services__carousel-btn services__carousel-btn--prev" type="button" aria-label="Previous packages">
+                  <span aria-hidden="true">‹</span>
+                </button>
+                <div class="services__carousel-viewport">
+                  <div class="services__carousel-track">
+                    <article class="services__workshop-card">
+                      <p class="services__workshop-tag">Lite</p>
+                      <h4 class="services__workshop-title">Lite</h4>
+                      <p class="services__workshop-duration">Multi-day</p>
+                      <p class="services__workshop-desc">One facilitated session plus insider local recommendations.</p>
+                      <a class="services__workshop-link" href="/services/offsite-lite">More details</a>
+                    </article>
+                    <article class="services__workshop-card">
+                      <p class="services__workshop-tag">Balanced</p>
+                      <h4 class="services__workshop-title">Balanced</h4>
+                      <p class="services__workshop-duration">Multi-day</p>
+                      <p class="services__workshop-desc">Two sessions plus curated team activities.</p>
+                      <a class="services__workshop-link" href="/services/offsite-balanced">More details</a>
+                    </article>
+                    <article class="services__workshop-card">
+                      <p class="services__workshop-tag">Productive</p>
+                      <h4 class="services__workshop-title">Productive</h4>
+                      <p class="services__workshop-duration">Multi-day</p>
+                      <p class="services__workshop-desc">Morning sessions with full logistics handled.</p>
+                      <a class="services__workshop-link" href="/services/offsite-productive">More details</a>
+                    </article>
+                    <article class="services__workshop-card">
+                      <p class="services__workshop-tag">Full Offsite</p>
+                      <h4 class="services__workshop-title">Full Offsite</h4>
+                      <p class="services__workshop-duration">Multi-day</p>
+                      <p class="services__workshop-desc">Complete multi-day strategic retreat in Goa.</p>
+                      <a class="services__workshop-link" href="/services/offsite-full">More details</a>
+                    </article>
+                  </div>
+                </div>
+                <button class="services__carousel-btn services__carousel-btn--next" type="button" aria-label="Next packages">
+                  <span aria-hidden="true">›</span>
+                </button>
               </div>
             </div>
           </div>

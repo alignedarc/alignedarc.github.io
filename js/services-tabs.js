@@ -43,11 +43,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const accent = tab.dataset.accent;
     const accentSoft = tab.dataset.accentSoft;
+    const ink = tab.dataset.ink;
     if (accent) {
       section.style.setProperty('--services-accent', accent);
     }
     if (accentSoft) {
       section.style.setProperty('--services-accent-soft', accentSoft);
+    }
+    if (ink) {
+      section.style.setProperty('--services-ink', ink);
     }
 
     requestAnimationFrame(setCanvasHeight);
