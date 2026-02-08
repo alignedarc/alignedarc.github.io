@@ -197,7 +197,163 @@
         </div>
       </div>
     </section>
-    
+
+    <!-- ===================================
+         STORY SECTIONS — Stacking Cards
+         =================================== -->
+    <div class="story-stack">
+
+      <!-- STORY 1: Hook — "It's Not a People Problem" -->
+      <section class="story-stack__card story-hook story-reveal" aria-label="It's not a people problem">
+        <div class="story-stack__card-inner">
+          <p class="story-hook__lead">
+            Your team is smart. Motivated. Experienced.<br>
+            So why does every decision still loop through you?
+          </p>
+          <h2 class="story-hook__punch">It's not a people problem.</h2>
+          <p class="story-hook__sub">
+            It's a framework mismatch — and it's costing you more than you think.
+          </p>
+        </div>
+      </section>
+
+      <!-- STORY 2: The Mismatch — combined insight + sprint scene -->
+      <section class="story-stack__card story-mismatch story-reveal" aria-label="The mismatch">
+        <div class="story-stack__card-inner">
+          <h2 class="story-mismatch__title">Same Meeting. Two Different Realities.</h2>
+          <!-- <p class="story-mismatch__subtitle">Without a shared framework, these realities collide.</p> -->
+
+          <div class="story-mismatch__scene">
+            <div class="story-mismatch__bar-wrap">
+              <div class="story-mismatch__bar-header">
+                <span class="story-mismatch__bar-label">Meeting duration</span>
+                <span class="story-mismatch__bar-time">45 min → 2 hours</span>
+              </div>
+              <div class="story-mismatch__bar-track">
+                <div class="story-mismatch__bar-fill"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="story-mismatch__grid">
+            <div class="story-mismatch__persona story-mismatch__persona--builder">
+              <p class="story-mismatch__persona-label">The Builder</p>
+              <h3 class="story-mismatch__persona-title">"What exactly are we building?"</h3>
+              <ul class="story-mismatch__traits">
+                <li>Needs clear scope before committing</li>
+                <li>Estimates from complexity and unknowns</li>
+                <li>Resists vague requirements</li>
+              </ul>
+            </div>
+            <div class="story-mismatch__vs" aria-hidden="true">
+              <span></span>
+            </div>
+            <div class="story-mismatch__persona story-mismatch__persona--driver">
+              <p class="story-mismatch__persona-label">The Driver</p>
+              <h3 class="story-mismatch__persona-title">"When can we ship it?"</h3>
+              <ul class="story-mismatch__traits">
+                <li>Needs fast directional alignment</li>
+                <li>Estimates from business urgency</li>
+                <li>Resists over-scoping the solution</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- STORY 4: Cost — "The Cost Compounds" -->
+      <section class="story-stack__card story-cost story-reveal" aria-label="The cost compounds">
+        <div class="story-stack__card-inner">
+          <h2 class="story-cost__title">The Cost Compounds</h2>
+          <div class="story-cost__cards">
+            <div class="story-cost__card">
+              <svg class="story-cost__icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <circle cx="18" cy="18" r="15"/>
+                <path d="M18 10v8l5 3"/>
+              </svg>
+              <div>
+                <h3 class="story-cost__card-title">Stuck decisions → missed windows</h3>
+                <p class="story-cost__card-desc">Every week a decision loops, the market moves without you.</p>
+              </div>
+            </div>
+            <div class="story-cost__card">
+              <svg class="story-cost__icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M18 6v24M10 14l8-8 8 8"/>
+                <path d="M8 28h20"/>
+              </svg>
+              <div>
+                <h3 class="story-cost__card-title">Bottleneck leader → velocity capped</h3>
+                <p class="story-cost__card-desc">If every call routes through you, the team can only move as fast as your calendar.</p>
+              </div>
+            </div>
+            <div class="story-cost__card">
+              <svg class="story-cost__icon" viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <circle cx="12" cy="14" r="5"/>
+                <circle cx="24" cy="14" r="5"/>
+                <path d="M6 30c0-5 4-8 12-8s12 3 12 8"/>
+              </svg>
+              <div>
+                <h3 class="story-cost__card-title">Smart people fighting → talent drain</h3>
+                <p class="story-cost__card-desc">Your best people don't leave because of pay. They leave because the work feels stuck.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- STORY 5: Transformation — "Imagine This Instead" -->
+      <section class="story-stack__card story-transform story-reveal" aria-label="Imagine this instead">
+        <div class="story-stack__card-inner">
+          <h2 class="story-transform__title">Imagine This Instead</h2>
+          <!-- <p class="story-transform__subtitle">One framework shift. Three metrics transformed.</p> -->
+          <div class="story-transform__toggle-wrap">
+            <button class="story-transform__toggle" id="transform-toggle" role="switch" aria-checked="false">
+              <span class="story-transform__toggle-label--mismatch">Today</span>
+              <span class="story-transform__toggle-track">
+                <span class="story-transform__toggle-knob"></span>
+              </span>
+              <span class="story-transform__toggle-label--fit">With Framework</span>
+            </button>
+          </div>
+          <div class="story-transform__metrics">
+            <div class="story-transform__metric">
+              <span class="story-transform__metric-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              </span>
+              <span class="story-transform__metric-value">2 hrs</span>
+              <span class="story-transform__metric-label">Sprint Planning</span>
+              <span class="story-transform__metric-caption">per session</span>
+            </div>
+            <div class="story-transform__metric">
+              <span class="story-transform__metric-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+              </span>
+              <span class="story-transform__metric-value">5 days</span>
+              <span class="story-transform__metric-label">Decision Cycle</span>
+              <span class="story-transform__metric-caption">avg turnaround</span>
+            </div>
+            <div class="story-transform__metric">
+              <span class="story-transform__metric-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 15l-6-6-6 6"/><path d="M18 9l-6-6-6 6"/></svg>
+              </span>
+              <span class="story-transform__metric-value">8 / mo</span>
+              <span class="story-transform__metric-label">Escalations</span>
+              <span class="story-transform__metric-caption">to leadership</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- STORY 6: Primary CTA — "Let's Figure Out What's Stuck" -->
+      <section class="story-stack__card story-stack__card--cta story-reveal" aria-label="Get started">
+        <div class="story-stack__card-inner story-stack__card-inner--cta">
+          <h2 class="story-cta__title">Let's Figure Out What's Stuck</h2>
+          <p class="story-cta__sub">One conversation. No pitch. We'll tell you exactly which framework fits your situation.</p>
+          <a href="#contact" class="btn btn--primary btn--large">Start a Conversation</a>
+        </div>
+      </section>
+
+    </div>
 
     <!-- SERVICES SECTION -->
     <section class="services" id="services">
@@ -761,6 +917,7 @@
        =================================== -->
   <script src="/js/navigation.js"></script>
   <script src="/js/hero-scroll.js"></script>
+  <script src="/js/story-animations.js"></script>
   <script src="/js/accordion.js"></script>
   <script src="/js/impact-carousel.js"></script>
   <script src="/js/services-tabs.js"></script>
