@@ -364,20 +364,30 @@
 
           <span class="story-cta__eyebrow">How We Build Frameworks That Fit</span>
 
+          <div class="story-cta__path-wrap" aria-hidden="true">
+            <svg class="story-cta__path-svg" viewBox="0 0 780 150" fill="none">
+              <path class="story-cta__path-line" d="M30 72 C 130 34, 206 122, 300 86 S 474 40, 560 82 S 678 120, 750 70" />
+              <circle class="story-cta__checkpoint is-active" data-step-dot="before" cx="101" cy="56" r="14" />
+              <circle class="story-cta__checkpoint" data-step-dot="during" cx="390" cy="63" r="14" />
+              <circle class="story-cta__checkpoint" data-step-dot="after" cx="679" cy="85" r="14" />
+              <circle class="story-cta__traveler" cx="101" cy="56" r="9" />
+            </svg>
+          </div>
+
           <div class="story-cta__steps">
-            <article class="story-cta__step">
+            <article class="story-cta__step is-active" data-step-card="before">
               <span class="story-cta__step-marker">Before</span>
               <h4 class="story-cta__step-title">Map how your team processes information</h4>
               <p class="story-cta__step-desc">Who needs data vs speed. Who thinks systems vs details.</p>
               <p class="story-cta__step-example">Example: 3 analytical thinkers, 2 activators, 1 strategic visionary. That ratio shapes everything.</p>
             </article>
-            <article class="story-cta__step">
+            <article class="story-cta__step" data-step-card="during">
               <span class="story-cta__step-marker">During</span>
               <h4 class="story-cta__step-title">Build a framework that fits those patterns</h4>
               <p class="story-cta__step-desc">Analytical people get data time. Activators get clear decision checkpoints.</p>
               <p class="story-cta__step-example">Example: planning starts with a 15-min analysis window, then structured discussion with 3 decision checkpoints.</p>
             </article>
-            <article class="story-cta__step">
+            <article class="story-cta__step" data-step-card="after">
               <span class="story-cta__step-marker">After</span>
               <h4 class="story-cta__step-title">You own the framework</h4>
               <p class="story-cta__step-desc">Documented. Team trained. Run it yourselves.</p>

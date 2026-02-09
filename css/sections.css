@@ -1682,7 +1682,7 @@
   font-size: var(--text-lg);
   color: var(--color-text-light);
   margin-bottom: var(--space-xl);
-  max-width: 440px;
+  max-width: 660px;
 }
 
 .story-cta__header {
@@ -1778,6 +1778,50 @@
   gap: var(--space-lg);
 }
 
+.story-cta__path-wrap {
+  width: 100%;
+  max-width: 760px;
+  margin-bottom: 0;
+}
+
+.story-cta__path-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.story-cta__path-line {
+  stroke: var(--color-charcoal);
+  stroke-width: 8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 22 16;
+  opacity: 0.9;
+}
+
+.story-cta__checkpoint {
+  fill: var(--color-yellow);
+  stroke: var(--color-charcoal);
+  stroke-width: 3.5;
+  transform: scale(1);
+  transform-box: fill-box;
+  transform-origin: center center;
+  transition: transform 0.42s ease, filter 0.42s ease;
+}
+
+.story-cta__checkpoint.is-active {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 10px rgba(22, 22, 22, 0.2));
+}
+
+.story-cta__traveler {
+  fill: var(--color-cyan);
+  stroke: white;
+  stroke-width: 2.5;
+  filter: drop-shadow(0 0 8px rgba(3, 167, 145, 0.45));
+  pointer-events: none;
+}
+
 .story-cta__step {
   text-align: left;
   background: white;
@@ -1787,6 +1831,22 @@
   opacity: 0;
   transform: translateY(16px);
   transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.story-stack__card--cta.is-visible .story-cta__step {
+  opacity: 0.62;
+  transform: translateY(0) scale(0.98);
+}
+
+.story-cta__step.is-active {
+  border-color: rgba(3, 167, 145, 0.45);
+  box-shadow: 0 20px 34px rgba(3, 167, 145, 0.2);
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.story-cta__step:not(.is-active) .story-cta__step-marker {
+  opacity: 0.56;
 }
 
 .story-cta__step-marker {
@@ -2226,6 +2286,11 @@
   .story-cta__step {
     text-align: left;
   }
+
+  .story-cta__path-wrap {
+    max-width: 100%;
+    margin-bottom: var(--space-xs);
+  }
 }
 
 /* ===================================
@@ -2264,5 +2329,14 @@
   .story-hook__punch::after {
     width: 100%;
     transition: none;
+  }
+
+  .story-cta__checkpoint {
+    transform: none;
+    filter: none;
+  }
+
+  .story-cta__traveler {
+    filter: none;
   }
 }

@@ -144,12 +144,155 @@
     }
   }
 
+  /* ----- Section 6: CTA Process Path ----- */
+  function initCtaPathAnimation() {
+    var section = document.querySelector('.story-stack__card--cta');
+    if (!section) return;
+
+    var sequence = ['before', 'during', 'after'];
+    var stops = [0.1, 0.5, 0.83];
+    var dots = section.querySelectorAll('.story-cta__checkpoint');
+    var cards = section.querySelectorAll('.story-cta__step[data-step-card]');
+    var path = section.querySelector('.story-cta__path-line');
+    var traveler = section.querySelector('.story-cta__traveler');
+    if (!dots.length || !cards.length || !traveler) return;
+
+    var current = 0;
+    var target = 1;
+    var phase = 'move';
+    var moveProgress = 0;
+    var holdElapsed = 0;
+    var moveDuration = 1150;
+    var holdDuration = 360;
+    var rafId = null;
+    var running = false;
+    var lastTs = 0;
+    var totalLength = 0;
+
+    function alignDotsToPath() {
+      if (!path || typeof path.getTotalLength !== 'function') return;
+      totalLength = path.getTotalLength();
+      for (var i = 0; i < sequence.length; i++) {
+        var dot = section.querySelector('.story-cta__checkpoint[data-step-dot="' + sequence[i] + '"]');
+        if (!dot) continue;
+        var point = path.getPointAtLength(totalLength * stops[i]);
+        dot.setAttribute('cx', point.x.toFixed(2));
+        dot.setAttribute('cy', point.y.toFixed(2));
+      }
+
+      var startPoint = path.getPointAtLength(totalLength * stops[current]);
+      traveler.setAttribute('cx', startPoint.x.toFixed(2));
+      traveler.setAttribute('cy', startPoint.y.toFixed(2));
+    }
+
+    function easeInOut(t) {
+      return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+    }
+
+    function setTravelerAt(progress) {
+      if (!totalLength) return;
+      var start = stops[current];
+      var end = stops[target];
+      var eased = easeInOut(progress);
+      var dist = (start + (end - start) * eased) * totalLength;
+      var point = path.getPointAtLength(dist);
+      traveler.setAttribute('cx', point.x.toFixed(2));
+      traveler.setAttribute('cy', point.y.toFixed(2));
+    }
+
+    function setActive(step) {
+      for (var i = 0; i < dots.length; i++) {
+        dots[i].classList.toggle('is-active', dots[i].getAttribute('data-step-dot') === step);
+      }
+
+      for (var j = 0; j < cards.length; j++) {
+        cards[j].classList.toggle('is-active', cards[j].getAttribute('data-step-card') === step);
+      }
+    }
+
+    function stepFrame(ts) {
+      if (!running) return;
+      if (!lastTs) lastTs = ts;
+      var delta = ts - lastTs;
+      lastTs = ts;
+
+      if (phase === 'move') {
+        moveProgress += delta / moveDuration;
+        if (moveProgress >= 1) {
+          moveProgress = 1;
+          setTravelerAt(moveProgress);
+          current = target;
+          target = (current + 1) % sequence.length;
+          setActive(sequence[current]);
+          phase = 'hold';
+          holdElapsed = 0;
+        } else {
+          setTravelerAt(moveProgress);
+        }
+      } else {
+        holdElapsed += delta;
+        if (holdElapsed >= holdDuration) {
+          phase = 'move';
+          moveProgress = 0;
+        }
+      }
+
+      rafId = requestAnimationFrame(stepFrame);
+    }
+
+    function start() {
+      if (running) return;
+      running = true;
+      lastTs = 0;
+      rafId = requestAnimationFrame(stepFrame);
+    }
+
+    function stop() {
+      if (!running) return;
+      running = false;
+      if (rafId) {
+        cancelAnimationFrame(rafId);
+        rafId = null;
+      }
+    }
+
+    alignDotsToPath();
+    setActive(sequence[current]);
+    setTravelerAt(0);
+
+    if ('IntersectionObserver' in window) {
+      var observer = new IntersectionObserver(function(entries) {
+        var entry = entries[0];
+        if (entry.isIntersecting) {
+          start();
+        } else {
+          stop();
+        }
+      }, { threshold: 0.35, rootMargin: '0px 0px -15% 0px' });
+      observer.observe(section);
+    } else {
+      start();
+    }
+
+    var resizeTicking = false;
+    window.addEventListener('resize', function() {
+      if (resizeTicking) return;
+      resizeTicking = true;
+      requestAnimationFrame(function() {
+        alignDotsToPath();
+        setTravelerAt(moveProgress);
+        resizeTicking = false;
+      });
+    });
+  }
+
   /* ----- Init ----- */
   function init() {
     createRevealObserver('.story-reveal:not(.story-reveal--late)');
     initLateReveal();
     initParallax();
     initTransformToggle();
+    initCtaPathAnimation();
   }
 
   if (document.readyState === 'loading') {
