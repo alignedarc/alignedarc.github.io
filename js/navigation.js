@@ -75,7 +75,14 @@
 
     // Get navigation height for offset
     const navHeight = nav ? nav.offsetHeight : 0;
-    const targetPosition = targetElement.offsetTop - navHeight;
+    let additionalOffset = 0;
+
+    // Stacked story cards need a deeper landing point on desktop.
+    if (targetId === '#process' && window.innerWidth >= 1024) {
+      additionalOffset = 840;
+    }
+
+    const targetPosition = targetElement.offsetTop - navHeight + additionalOffset;
 
     window.scrollTo({
       top: targetPosition,

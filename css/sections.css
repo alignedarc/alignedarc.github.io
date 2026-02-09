@@ -166,6 +166,7 @@
   position: relative;
   /* background-color: white; */
   padding-top: var(--space-xl);
+  padding-bottom: 0;
   --services-accent: var(--color-yellow);
   --services-accent-soft: rgba(236, 206, 0, 0.14);
   --services-ink: var(--color-charcoal);
@@ -879,7 +880,7 @@
    =================================== */
 
 .about {
-  background-color: white;
+  /* background-color: white; */
   padding: var(--space-lg);
   padding-bottom: var(--space-3xl);
 }
@@ -1023,7 +1024,7 @@
   margin-left: auto;
   margin-right: auto;
   max-width: 1600px;
-  width: calc(100% - var(--space-lg));
+  width: calc(100% - var(--space-4xl));
   padding: 0;
   margin-bottom: var(--space-lg);
 }
@@ -2042,9 +2043,9 @@
   justify-content: center;
   padding: 0.9rem 2.6rem;
   border-radius: var(--radius-pill);
-  font-family: var(--font-serif);
+  font-family: var(--font-body);
   font-size: var(--text-xl);
-  font-weight: 500;
+  font-weight: 300;
   /* letter-spacing: 0.06em; */
   text-transform: lowercase;
   color: var(--color-charcoal);

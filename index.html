@@ -43,6 +43,11 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <meta name="apple-mobile-web-app-title" content="Aligned Arc">
 
+  <!-- Open-source webfont loading -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap">
+
   <!-- Stylesheets -->
   <link rel="stylesheet" href="/css/reset.css">
   <link rel="stylesheet" href="/css/variables.css">
@@ -151,9 +156,9 @@
       </button>
 
       <ul class="nav__menu" id="nav-menu">
-        <li><a href="#about">ABOUT</a></li>
-        <li><a href="#services">SERVICES</a></li>
         <li><a href="#process">PROCESS</a></li>
+        <li><a href="#services">SERVICES</a></li>
+        <li><a href="#about">ABOUT</a></li>
         <li><a href="#contact">CONTACT</a></li>
         <li><a href="#contact" class="btn btn--primary">GET STARTED</a></li>
       </ul>
@@ -347,7 +352,7 @@
       </section>
 
       <!-- STORY 6: Primary CTA — "Let's Figure Out What's Stuck" -->
-      <section class="story-stack__card story-stack__card--cta story-reveal" aria-label="Get started">
+      <section class="story-stack__card story-stack__card--cta story-reveal" id="process" aria-label="Get started">
         <div class="story-stack__card-inner story-stack__card-inner--cta">
           <div class="story-cta__header">
             <h2 class="story-cta__title">Let's Figure Out What's Stuck</h2>
@@ -728,208 +733,6 @@
       </div>
     </section>
 
-    <!-- PROCESS/HOW IT WORKS SECTION -->
-    <section class="process" id="process">
-      <div class="container">
-        <h2 class="section-title">The Journey</h2>
-        <p class="section-subtitle">From first conversation to lasting transformation</p>
-
-        <div class="process__layout">
-          <!-- Left side: Professional image -->
-          <div class="process__image">
-            <img src="/assets/images/process.jpg" alt="Professional consultation" loading="lazy">
-          </div>
-
-          <!-- Right side: Accordion -->
-          <div class="process__accordion">
-
-            <div class="process__item" data-accordion-item>
-              <button class="process__header" aria-expanded="true" data-accordion-trigger>
-                <div class="process__header-content">
-                  <span class="process__number">01</span>
-                  <h3 class="process__title">Discovery Phase</h3>
-                </div>
-                <svg class="process__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <polyline points="6 9 12 15 18 9"></polyline>
-                </svg>
-              </button>
-              <div class="process__content" data-accordion-content>
-                <p>We start by understanding your goals, challenges, and overall direction to establish a clear foundation before moving forward with clarity.</p>
-              </div>
-            </div>
-
-            <div class="process__item" data-accordion-item>
-              <button class="process__header" aria-expanded="false" data-accordion-trigger>
-                <div class="process__header-content">
-                  <span class="process__number">02</span>
-                  <h3 class="process__title">Strategic Alignment</h3>
-                </div>
-                <svg class="process__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <polyline points="6 9 12 15 18 9"></polyline>
-                </svg>
-              </button>
-              <div class="process__content" data-accordion-content>
-                <p>No cookie-cutter approach. Based on your specific challenge, I design the right format—workshop, planning session, or integrated program that aligns with your team's unique dynamics.</p>
-              </div>
-            </div>
-
-            <div class="process__item" data-accordion-item>
-              <button class="process__header" aria-expanded="false" data-accordion-trigger>
-                <div class="process__header-content">
-                  <span class="process__number">03</span>
-                  <h3 class="process__title">Framework Building</h3>
-                </div>
-                <svg class="process__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <polyline points="6 9 12 15 18 9"></polyline>
-                </svg>
-              </button>
-              <div class="process__content" data-accordion-content>
-                <p>Half-day to multi-session engagements. Your team does the thinking. I structure it so you get to clarity—decisions made, frameworks built, alignment created.</p>
-              </div>
-            </div>
-
-            <div class="process__item" data-accordion-item>
-              <button class="process__header" aria-expanded="false" data-accordion-trigger>
-                <div class="process__header-content">
-                  <span class="process__number">04</span>
-                  <h3 class="process__title">Implementation</h3>
-                </div>
-                <svg class="process__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <polyline points="6 9 12 15 18 9"></polyline>
-                </svg>
-              </button>
-              <div class="process__content" data-accordion-content>
-                <p>You leave with frameworks you can apply without me. Documentation, decision protocols, team operating systems—tools that embed into daily work and create lasting change.</p>
-              </div>
-            </div>
-
-            <div class="process__item" data-accordion-item>
-              <button class="process__header" aria-expanded="false" data-accordion-trigger>
-                <div class="process__header-content">
-                  <span class="process__number">05</span>
-                  <h3 class="process__title">Continuous Support</h3>
-                </div>
-                <svg class="process__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <polyline points="6 9 12 15 18 9"></polyline>
-                </svg>
-              </button>
-              <div class="process__content" data-accordion-content>
-                <p>2-3 check-ins to ensure behavior change is real. We track what actually sticks, not just what felt good in the room.</p>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- RESULTS/TESTIMONIALS SECTION -->
-    <section class="testimonials" id="results">
-      <div class="container container--wide">
-        <h2 class="section-title">What Changes</h2>
-        <p class="section-subtitle" style="color: rgba(255, 255, 255, 0.8);">
-          Real shifts teams experience after working together
-        </p>
-
-        <div class="impact-carousel" role="region" aria-label="Impact Results Carousel" aria-roledescription="carousel">
-          <div class="impact-carousel__container">
-            <div class="impact-carousel__track">
-
-              <!-- Impact Card 1: Decisions Get Faster -->
-              <article class="impact-card impact-card--primary">
-                <div class="impact-card__label">SPEED</div>
-                <h3 class="impact-card__title">Decisions Get Faster</h3>
-                <div class="impact-card__transformation">
-                  <div class="transformation__before">
-                    <span class="transformation__value">3</span>
-                    <span class="transformation__unit">meetings</span>
-                  </div>
-                  <svg class="transformation__arrow" width="40" height="24" viewBox="0 0 40 24" fill="none">
-                    <path d="M0 12H38M38 12L28 2M38 12L28 22" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
-                  </svg>
-                  <div class="transformation__after">
-                    <span class="transformation__value">1</span>
-                    <span class="transformation__unit">meeting</span>
-                  </div>
-                </div>
-                <p class="impact-card__detail">Shared decision criteria means team can apply logic without waiting for leader</p>
-              </article>
-
-              <!-- Impact Card 2: Leaders Stop Being the Bottleneck -->
-              <article class="impact-card impact-card--secondary">
-                <div class="impact-card__label">AUTONOMY</div>
-                <h3 class="impact-card__title">Leaders Stop Being the Bottleneck</h3>
-                <div class="impact-card__stat">
-                  <span class="stat__number">40%</span>
-                  <span class="stat__description">fewer decisions escalated to leader</span>
-                </div>
-                <p class="impact-card__detail">Team knows what needs escalation vs. what they own</p>
-              </article>
-
-              <!-- Impact Card 3: Friction Becomes Flow -->
-              <article class="impact-card impact-card--tertiary">
-                <div class="impact-card__label">COLLABORATION</div>
-                <h3 class="impact-card__title">Friction Becomes Flow</h3>
-                <div class="impact-card__flow">
-                  <div class="flow__item">
-                    <div class="flow__icon">✓</div>
-                    <span>Handoffs smooth</span>
-                  </div>
-                  <div class="flow__item">
-                    <div class="flow__icon">✓</div>
-                    <span>Delegation strategic</span>
-                  </div>
-                </div>
-                <p class="impact-card__detail">Understanding how people are wired turns clashes into complementary strengths</p>
-              </article>
-
-              <!-- Impact Card 4: Meetings Get Efficient -->
-              <article class="impact-card impact-card--accent">
-                <div class="impact-card__label">EFFICIENCY</div>
-                <h3 class="impact-card__title">Meetings Get Efficient</h3>
-                <div class="impact-card__transformation">
-                  <div class="transformation__before">
-                    <span class="transformation__value">2hr</span>
-                    <span class="transformation__unit">planning</span>
-                  </div>
-                  <svg class="transformation__arrow" width="40" height="24" viewBox="0 0 40 24" fill="none">
-                    <path d="M0 12H38M38 12L28 2M38 12L28 22" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
-                  </svg>
-                  <div class="transformation__after">
-                    <span class="transformation__value">45min</span>
-                    <span class="transformation__unit">planning</span>
-                  </div>
-                </div>
-                <p class="impact-card__detail">Clear frameworks eliminate circular discussions</p>
-              </article>
-
-            </div>
-          </div>
-
-          <!-- Carousel Navigation -->
-          <button class="carousel-nav carousel-nav--prev" aria-label="Previous impact">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <polyline points="15 18 9 12 15 6"></polyline>
-            </svg>
-          </button>
-          <button class="carousel-nav carousel-nav--next" aria-label="Next impact">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <polyline points="9 18 15 12 9 6"></polyline>
-            </svg>
-          </button>
-
-          <!-- Carousel Indicators -->
-          <div class="carousel-indicators">
-            <button class="carousel-indicator active" data-index="0" aria-label="Go to slide 1"></button>
-            <button class="carousel-indicator" data-index="1" aria-label="Go to slide 2"></button>
-            <button class="carousel-indicator" data-index="2" aria-label="Go to slide 3"></button>
-            <button class="carousel-indicator" data-index="3" aria-label="Go to slide 4"></button>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
     <!-- ABOUT/FOUNDER SECTION -->
     <section class="about" id="about">
       <div class="container">
@@ -956,36 +759,38 @@
 
     <!-- CONTACT FORM SECTION -->
     <section class="contact" id="contact">
-      <div class="container container--narrow">
+      <div class="container">
         <h2 class="section-title">Let's Capitalize Your Talent</h2>
         <p class="section-subtitle">Tell me what's stuck. We'll figure out if and how I can help.</p>
 
         <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" id="contact-form">
 
-          <div class="form-group">
-            <label for="name">Your Name <span class="required">*</span></label>
-            <input type="text" id="name" name="name" required>
-          </div>
+          <div class="contact-form__primary-grid">
+            <div class="form-group">
+              <label for="name">Your Name <span class="required">*</span></label>
+              <input type="text" id="name" name="name" required>
+            </div>
 
-          <div class="form-group">
-            <label for="email">Email <span class="required">*</span></label>
-            <input type="email" id="email" name="email" required>
-          </div>
+            <div class="form-group">
+              <label for="email">Email <span class="required">*</span></label>
+              <input type="email" id="email" name="email" required>
+            </div>
 
-          <div class="form-group">
-            <label for="role">Your Role</label>
-            <select id="role" name="role">
-              <option value="">Select one</option>
-              <option value="engineering-leader">Engineering/Product Leader</option>
-              <option value="hr-leader">HR/People Leader</option>
-              <option value="founder">Founder/Executive</option>
-              <option value="other">Other</option>
-            </select>
-          </div>
+            <div class="form-group">
+              <label for="role">Your Role</label>
+              <select id="role" name="role">
+                <option value="">Select one</option>
+                <option value="engineering-leader">Engineering/Product Leader</option>
+                <option value="hr-leader">HR/People Leader</option>
+                <option value="founder">Founder/Executive</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
 
-          <div class="form-group">
-            <label for="team-size">Team Size</label>
-            <input type="text" id="team-size" name="team-size" placeholder="e.g., 8-15 people">
+            <div class="form-group">
+              <label for="team-size">Team Size</label>
+              <input type="text" id="team-size" name="team-size" placeholder="e.g., 8-15 people">
+            </div>
           </div>
 
           <div class="form-group">

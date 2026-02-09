@@ -1,6 +1,6 @@
 /* ===================================
    TYPOGRAPHY SYSTEM - Aligned Arc
-   Primary: Founders Grotesk (Sans-serif) - Body text
+  Primary: Manrope (Sans-serif) - Body text
    Display: Cormorant Garamond (Serif) - Headlines
    =================================== */
 
@@ -8,84 +8,7 @@
    FONT IMPORTS
    =================================== */
 
-/* Founders Grotesk - Sans-serif (Body Font) */
-@font-face {
-  font-family: 'Founders Grotesk';
-  src: url('/assets/fonts/FoundersGrotesk-Light.otf') format('opentype');
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-  /* Improve font metrics */
-  ascent-override: 90%;
-  descent-override: 22%;
-  line-gap-override: 0%;
-}
-
-@font-face {
-  font-family: 'Founders Grotesk';
-  src: url('/assets/fonts/FoundersGrotesk-Regular.otf') format('opentype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-  ascent-override: 90%;
-  descent-override: 22%;
-  line-gap-override: 0%;
-}
-
-@font-face {
-  font-family: 'Founders Grotesk';
-  src: url('/assets/fonts/FoundersGrotesk-RegularItalic.otf') format('opentype');
-  font-weight: 400;
-  font-style: italic;
-  font-display: swap;
-  ascent-override: 90%;
-  descent-override: 22%;
-  line-gap-override: 0%;
-}
-
-@font-face {
-  font-family: 'Founders Grotesk';
-  src: url('/assets/fonts/FoundersGrotesk-Medium.otf') format('opentype');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-  ascent-override: 90%;
-  descent-override: 22%;
-  line-gap-override: 0%;
-}
-
-@font-face {
-  font-family: 'Founders Grotesk';
-  src: url('/assets/fonts/FoundersGrotesk-MediumItalic.otf') format('opentype');
-  font-weight: 500;
-  font-style: italic;
-  font-display: swap;
-  ascent-override: 90%;
-  descent-override: 22%;
-  line-gap-override: 0%;
-}
-
-@font-face {
-  font-family: 'Founders Grotesk';
-  src: url('/assets/fonts/FoundersGrotesk-Bold.otf') format('opentype');
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-  ascent-override: 90%;
-  descent-override: 22%;
-  line-gap-override: 0%;
-}
-
-@font-face {
-  font-family: 'Founders Grotesk';
-  src: url('/assets/fonts/FoundersGrotesk-BoldItalic.otf') format('opentype');
-  font-weight: 600;
-  font-style: italic;
-  font-display: swap;
-  ascent-override: 90%;
-  descent-override: 22%;
-  line-gap-override: 0%;
-}
+/* Manrope is loaded in index.html from Google Fonts (SIL OFL). */
 
 /* Cormorant Garamond - Serif (Display Font) */
 @font-face {
