@@ -93,15 +93,14 @@
   z-index: var(--z-nav);
   transition: all var(--transition-base);
   padding: 0.75rem 1.75rem;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 12px 32px rgba(48, 48, 48, 0.24), 0 4px 12px rgba(48, 48, 48, 0.14);
   font-family: var(--font-display);
   font-weight: 500;
-  font-style: bold;
   text-align: center;
 }
 
 .nav.scrolled {
-  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 16px 40px rgba(48, 48, 48, 0.28), 0 5px 16px rgba(48, 48, 48, 0.16);
   background-color: rgba(255, 255, 255, 0.98);
 }
 

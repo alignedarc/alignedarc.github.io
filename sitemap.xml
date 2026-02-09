@@ -12,17 +12,9 @@
     <priority>1.0</priority>
   </url>
 
-  <!-- Value Proposition Section -->
+  <!-- Services Section -->
   <url>
-    <loc>https://alignedarc.com/#value-prop</loc>
-    <lastmod>2025-01-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Offerings/Services Section -->
-  <url>
-    <loc>https://alignedarc.com/#offerings</loc>
+    <loc>https://alignedarc.com/#services</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>

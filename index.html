@@ -132,6 +132,9 @@
 </head>
 
 <body>
+  <!-- Full-page contour background (fixed, behind everything) -->
+  <canvas id="contour-bg" class="contour-bg" aria-hidden="true"></canvas>
+
   <!-- ===================================
        NAVIGATION
        =================================== -->
@@ -167,33 +170,32 @@
       <div class="container hero__container">
         <div class="hero__content">
           <div class="headline-home-a">
-            <h1 class="hero__title" animate="title-load" style="opacity: 1; filter: blur(0px);">
+            <h1 class="hero__title">
               Build decision frameworks<br>
               your team can keep using.
             </h1>
-            <!-- <div class="home-a-tag-1" style="opacity: 1;">
-              <div class="label-master yellow">
-                <div class="label-small">PEOPLE AND STRATEGY</div>
-              </div>
-            </div>
-            <div class="home-a-tag-2" style="opacity: 1;">
-              <div class="label-master pink">
-                <div class="label-small">FEMALE-LED</div>
-              </div>
-            </div>
-            <div class="home-a-tag-3" style="opacity: 1;">
-              <div class="label-master cyan">
-                <div class="label-small">CONSULTING</div>
-              </div>
-            </div> -->
-            <h3 class="hero__subtitle" animate="title-load" style="opacity: 1; filter: blur(0px);">
+            <h3 class="hero__subtitle">
               Stop refereeing every decision your team makes!
             </h3>
-            <p class="hero__subtitle-note" animate="title-load" style="opacity: 1; filter: blur(0px);">
+            <p class="hero__subtitle-note">
               We'll tell you exactly which framework fits your situation&mdash;no pitch.
             </p>
           </div>
-
+          <button
+            class="hero__scroll-indicator"
+            type="button"
+            aria-label="Scroll to next section"
+            data-hero-scroll
+            data-scroll-target=".story-stack"
+            data-scroll-offset="88"
+          >
+            <span class="hero__scroll-icon-wrap" aria-hidden="true">
+              <svg class="hero__scroll-icon" viewBox="0 0 64 64" fill="none">
+                <path d="M32 16V42" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"/>
+                <path d="M18 30L32 44L46 30" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+          </button>
         </div>
       </div>
     </section>
@@ -480,6 +482,28 @@
       </div>
     </section>
 
+    <!-- MOVING TAGS BAR -->
+    <section class="tags-marquee" aria-label="Outcomes tags">
+      <div class="tags-marquee__track">
+        <div class="tags-marquee__group">
+          <span class="tags-marquee__tag tags-marquee__tag--yellow">Clear Decisions</span>
+          <span class="tags-marquee__tag tags-marquee__tag--pink">Build Frameworks</span>
+          <span class="tags-marquee__tag tags-marquee__tag--cyan">Team Reset</span>
+          <span class="tags-marquee__tag tags-marquee__tag--yellow">Momentum</span>
+          <span class="tags-marquee__tag tags-marquee__tag--pink">Alignment</span>
+          <span class="tags-marquee__tag tags-marquee__tag--cyan">Innovation Engine</span>
+        </div>
+        <div class="tags-marquee__group" aria-hidden="true">
+          <span class="tags-marquee__tag tags-marquee__tag--yellow">Clear Decisions</span>
+          <span class="tags-marquee__tag tags-marquee__tag--pink">Build Frameworks</span>
+          <span class="tags-marquee__tag tags-marquee__tag--cyan">Team Reset</span>
+          <span class="tags-marquee__tag tags-marquee__tag--yellow">Momentum</span>
+          <span class="tags-marquee__tag tags-marquee__tag--pink">Alignment</span>
+          <span class="tags-marquee__tag tags-marquee__tag--cyan">Innovation Engine</span>
+        </div>
+      </div>
+    </section>
+
     <!-- SERVICES SECTION -->
     <section class="services" id="services">
       <div class="services__caption">
@@ -491,7 +515,7 @@
 
       <div class="services__tabs container--full" role="tablist" aria-label="Service categories">
         <div class="services__tab-wrap services__tab-wrap--quick">
-          <button class="services__tab services__tab--quick is-active" id="services-tab-quick" role="tab" aria-selected="true" aria-controls="services-panel-quick" data-accent="var(--color-yellow)" data-accent-soft=var(--color-yellow) data-ink="var(--color-charcoal)">
+          <button class="services__tab services__tab--quick is-active" id="services-tab-quick" role="tab" aria-selected="true" aria-controls="services-panel-quick" data-accent="var(--color-yellow)" data-accent-soft="var(--color-yellow)" data-ink="var(--color-charcoal)">
             <span class="services__tab-label">Quick Sessions</span>
             <span class="services__tab-meta">
               <span class="services__tab-desc">Focused alignment sprints</span>
@@ -1024,7 +1048,6 @@
           <ul class="footer__links">
             <li><a href="mailto:sunidhi@alignedarc.com">Email</a></li>
             <li><a href="https://www.linkedin.com/company/aligned-arc" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-            <!-- <li><a href="#journal">Journal</a></li> -->
           </ul>
         </div>
 
@@ -1040,13 +1063,14 @@
   <!-- ===================================
        JAVASCRIPT
        =================================== -->
+  <script src="/js/hero-contours.js"></script>
+  <script src="/js/hero-scroll-indicator.js"></script>
   <script src="/js/navigation.js"></script>
-  <script src="/js/hero-scroll.js"></script>
   <script src="/js/story-animations.js"></script>
   <script src="/js/accordion.js"></script>
   <script src="/js/impact-carousel.js"></script>
   <script src="/js/services-tabs.js"></script>
-  <script src="/js/workshops-carousel.js"></script>
+  <script src="/js/services-carousel.js"></script>
   <script src="/js/form-handler.js"></script>
 </body>
 </html>

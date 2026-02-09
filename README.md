@@ -6,7 +6,7 @@ A modern, responsive landing page for Aligned Arc consulting business. Built wit
 
 ## Features
 
-- **Signature Hero Scroll Effect**: Smooth zoom-out animation with tagline reveal
+- **Story stack animations**: Scroll-based reveals and interactive toggles
 - **Fully Responsive**: Mobile-first design that works beautifully on all devices
 - **SEO Optimized**: Complete meta tags, Open Graph, Twitter Cards, structured data
 - **PWA Ready**: Progressive Web App manifest for app-like experience
@@ -52,8 +52,12 @@ A modern, responsive landing page for Aligned Arc consulting business. Built wit
 │   ├── sections.css          # Section-specific styles (hero, services, etc.)
 │   └── responsive.css        # Media queries and breakpoints
 ├── js/
-│   ├── hero-scroll.js        # Signature hero zoom effect
 │   ├── navigation.js         # Mobile menu, sticky nav, smooth scroll
+│   ├── story-animations.js   # Story stack reveals and toggle
+│   ├── accordion.js          # Process section accordion
+│   ├── impact-carousel.js    # Results carousel
+│   ├── services-tabs.js      # Services tab switching
+│   ├── services-carousel.js  # Services carousel sizing/auto-rotation
 │   └── form-handler.js       # Formspree integration and validation
 ├── assets/
 │   ├── images/               # Logo, hero image, service images

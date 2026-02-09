@@ -20,7 +20,7 @@
     email: form.querySelector('#email'),
     role: form.querySelector('#role'),
     teamSize: form.querySelector('#team-size'),
-    message: form.querySelector('#message'),
+    challenge: form.querySelector('#challenge'),
     timeline: form.querySelector('#timeline')
   };
 
@@ -95,11 +95,11 @@
     }
 
     // Validate message
-    if (!formFields.message.value.trim()) {
+    if (!formFields.challenge.value.trim()) {
       errors.push('Please tell us what\'s stuck');
-      formFields.message.setAttribute('aria-invalid', 'true');
+      formFields.challenge.setAttribute('aria-invalid', 'true');
     } else {
-      formFields.message.setAttribute('aria-invalid', 'false');
+      formFields.challenge.setAttribute('aria-invalid', 'false');
     }
 
     return {

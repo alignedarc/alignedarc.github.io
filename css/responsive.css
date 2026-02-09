@@ -8,18 +8,6 @@
    0px - 767px
    =================================== */
 
-/* Reduce motion for users who prefer it */
-@media (prefers-reduced-motion: reduce) {
-  .hero__image {
-    transform: none !important;
-    transition: none !important;
-  }
-
-  .hero__tagline {
-    transition: opacity 0.3s ease;
-  }
-}
-
 /* ===================================
    TABLET
    768px and up
@@ -41,15 +29,6 @@
     max-width: 100%;
   }
 
-  /* Grids */
-  .services__grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .results__grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
   /* Forms */
   .contact-form {
     padding: var(--space-2xl) var(--space-3xl);
@@ -62,21 +41,6 @@
    =================================== */
 
 @media (min-width: 1024px) {
-  /* Hero enhancements */
-  .hero__image {
-    height: 600px;
-  }
-
-  /* Services grid - 3 columns */
-  .services__grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  /* Process timeline - better spacing */
-  .process__timeline {
-    grid-template-columns: repeat(5, 1fr);
-  }
-
   /* About section - side by side */
   .about__grid {
     grid-template-columns: 5fr 7fr;
@@ -94,11 +58,6 @@
    =================================== */
 
 @media (min-width: 1280px) {
-  /* Results grid - 4 columns */
-  .results__grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
-
   /* Container breathing room */
   :root {
     --container-padding: var(--space-2xl);
@@ -111,22 +70,15 @@
    =================================== */
 
 @media (min-width: 1536px) {
-  /* Cap hero image height */
-  .hero__image {
-    max-height: 700px;
-  }
 }
 
 /* ===================================
-   PRINT STYLES
-   =================================== */
+  PRINT STYLES
+  =================================== */
 
 @media print {
   .nav,
-  .nav__toggle,
-  .hero__arc,
-  .section__arc,
-  .constellation-wrapper {
+  .nav__toggle {
     display: none;
   }
 
@@ -158,10 +110,6 @@
   .hero {
     min-height: auto;
     padding: var(--space-xl) 0;
-  }
-
-  .hero__image {
-    height: 300px;
   }
 }
 
