@@ -39,6 +39,14 @@
     }
   }
 
+  /* ----- Late Reveal (when card is fully in view) ----- */
+  function initLateReveal() {
+    createRevealObserver('.story-reveal--late', {
+      threshold: 0.45,
+      rootMargin: '0px 0px -10% 0px'
+    });
+  }
+
   /* ----- Section 2: Parallax Drift ----- */
   function initParallax() {
     var section = document.querySelector('.story-mismatch');
@@ -86,6 +94,9 @@
 
     var section = document.querySelector('.story-transform');
     var vals = document.querySelectorAll('.story-transform__metric-value');
+    var autoToggled = false;
+    var userInteracted = false;
+    var autoTimer = null;
 
     // [before label, after label]
     var data = [
@@ -94,22 +105,49 @@
       ['8 / mo', '1-2 / mo']
     ];
 
-    btn.addEventListener('click', function() {
-      var isChecked = btn.getAttribute('aria-checked') === 'true';
-      var next = !isChecked;
+    function setToggle(next) {
       btn.setAttribute('aria-checked', String(next));
-
       if (section) section.classList.toggle('is-fit', next);
-
       for (var i = 0; i < vals.length; i++) {
         vals[i].textContent = next ? data[i][1] : data[i][0];
       }
+    }
+
+    btn.addEventListener('click', function() {
+      userInteracted = true;
+      if (autoTimer) {
+        clearTimeout(autoTimer);
+        autoTimer = null;
+      }
+
+      var isChecked = btn.getAttribute('aria-checked') === 'true';
+      setToggle(!isChecked);
     });
+
+    if (section && 'IntersectionObserver' in window) {
+      var observer = new IntersectionObserver(function(entries) {
+        var entry = entries[0];
+        if (entry.isIntersecting && !autoToggled && !userInteracted) {
+          autoTimer = setTimeout(function() {
+            if (autoToggled || userInteracted) return;
+            setToggle(true);
+            autoToggled = true;
+            autoTimer = null;
+          }, 700);
+        } else if (!entry.isIntersecting && autoTimer) {
+          clearTimeout(autoTimer);
+          autoTimer = null;
+        }
+      }, { threshold: 0.4, rootMargin: '0px 0px -10% 0px' });
+
+      observer.observe(section);
+    }
   }
 
   /* ----- Init ----- */
   function init() {
-    createRevealObserver('.story-reveal');
+    createRevealObserver('.story-reveal:not(.story-reveal--late)');
+    initLateReveal();
     initParallax();
     initTransformToggle();
   }
