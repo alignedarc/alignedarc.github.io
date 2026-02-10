@@ -41,11 +41,6 @@
    =================================== */
 
 @media (min-width: 1024px) {
-  /* About section - side by side */
-  .about__grid {
-    grid-template-columns: 5fr 7fr;
-  }
-
   /* Footer - 3 columns */
   .footer__grid {
     grid-template-columns: 2fr 1fr 1fr;

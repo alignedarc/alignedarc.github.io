@@ -15,6 +15,13 @@
       for (var i = 0; i < els.length; i++) {
         els[i].classList.add('is-visible');
       }
+      // Also reveal method steps + principle
+      var methodSteps = document.querySelectorAll('[data-method-step]');
+      for (var j = 0; j < methodSteps.length; j++) {
+        methodSteps[j].classList.add('is-visible');
+      }
+      var principle = document.querySelector('.about__method-principle');
+      if (principle) principle.classList.add('is-visible');
     });
     return;
   }
@@ -286,6 +293,42 @@
     });
   }
 
+  /* ----- About Method Circle Steps ----- */
+  function initMethodSteps() {
+    var steps = document.querySelectorAll('[data-method-step]');
+    var principle = document.querySelector('.about__method-principle');
+    if (!steps.length) return;
+
+    var stepObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          // Stagger: calculate delay based on index
+          var idx = Array.prototype.indexOf.call(steps, entry.target);
+          var delay = idx * 200; // 200ms stagger between each step
+          setTimeout(function() {
+            entry.target.classList.add('is-visible');
+          }, delay);
+          stepObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2, rootMargin: '0px 0px -80px 0px' });
+
+    for (var i = 0; i < steps.length; i++) {
+      stepObserver.observe(steps[i]);
+    }
+
+    // Reveal the principle footer
+    if (principle) {
+      var principleObserver = new IntersectionObserver(function(entries) {
+        if (entries[0].isIntersecting) {
+          entries[0].target.classList.add('is-visible');
+          principleObserver.unobserve(entries[0].target);
+        }
+      }, { threshold: 0.3, rootMargin: '0px 0px -40px 0px' });
+      principleObserver.observe(principle);
+    }
+  }
+
   /* ----- Init ----- */
   function init() {
     createRevealObserver('.story-reveal:not(.story-reveal--late)');
@@ -293,6 +336,7 @@
     initParallax();
     initTransformToggle();
     initCtaPathAnimation();
+    initMethodSteps();
   }
 
   if (document.readyState === 'loading') {

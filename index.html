@@ -156,10 +156,10 @@
       </button>
 
       <ul class="nav__menu" id="nav-menu">
+        <li><a href="#hero">HOME</a></li>
         <li><a href="#process">PROCESS</a></li>
         <li><a href="#services">SERVICES</a></li>
         <li><a href="#about">ABOUT</a></li>
-        <li><a href="#contact">CONTACT</a></li>
         <li><a href="#contact" class="btn btn--primary">GET STARTED</a></li>
       </ul>
     </div>
@@ -743,28 +743,146 @@
       </div>
     </section>
 
-    <!-- ABOUT/FOUNDER SECTION -->
+    <!-- ===================================
+         ABOUT / FOUNDER SECTION
+         Multi-panel editorial layout
+         =================================== -->
     <section class="about" id="about">
-      <div class="container">
-        <div class="about__grid">
 
-          <div class="about__image">
-            <img src="/assets/images/founder.jpg" alt="Sunidhi, Founder of Aligned Arc" width="500" height="600" loading="lazy">
+      <!-- PANEL 1: Intro — Editorial Profile Card -->
+      <div class="about__intro">
+        <div class="container">
+          <h2 class="about__headline">
+          Workshops for tech teams in India, built by an <em>experienced coach</em> who got tired of <em>insight without integration.</em>
+          </h2>
+        </div>
+
+        <div class="container">
+          <div class="about__profile-card">
+            <div class="about__profile-left">
+              <h3 class="about__profile-name">👋🏼 Sunidhi</h3>
+              <p class="about__profile-role">Founder &amp; Strategic Facilitator</p>
+              <div class="about__profile-credentials">
+                <span class="about__credential">7+ yrs coaching</span>
+                <span class="about__credential">1000+ clients coached</span>
+                <span class="about__credential">Gallup-Certified</span>
+              </div>
+            </div>
+
+            <div class="about__profile-photo">
+              <img src="/assets/images/founder.jpg" alt="Sunidhi, Founder of Aligned Arc — professional headshot" width="500" height="600" loading="lazy">
+            </div>
+
+            <div class="about__profile-right">
+              <p>I run Aligned Arc&nbsp;&mdash; workshops for tech teams in India that integrate team dynamics with strategic work. Same workshop. Both together.</p>
+              <p>Now focused specifically on tech teams after years of coaching individuals and teams across corporate India.</p>
+            </div>
           </div>
-
-          <div class="about__content">
-            <h2 class="section-title" style="text-align: left;">The Intersection</h2>
-            <p class="text-large">Most consultants stay in lanes: strategy people clarify plans, team coaches work on dynamics. No one connects them.</p>
-
-            <p>I started Aligned Arc because smart teams kept implementing new processes and still getting stuck in the exact same places. They were treating "how we work" and "how we work together" as completely separate problems.</p>
-
-            <p>The gap between strategy and team dynamics is where teams actually get stuck. That's where I work.</p>
-
-            <a href="#contact" class="btn btn--secondary">Start a Conversation</a>
-          </div>
-
         </div>
       </div>
+
+      <!-- PANEL 2: Origin Story Card -->
+      <div class="about__story">
+        <div class="container">
+          <div class="about__story-card">
+            <h3 class="about__story-card-title">A Short Story About Me</h3>
+            <div class="about__story-card-body">
+              <p>For the past six years, I've been coaching tech teams&mdash;helping them understand dynamics, strengths, and the invisible forces behind why people clash.</p>
+              <p>And honestly? The breakthroughs were real.</p>
+              <p>People would sit back and go, &ldquo;Oh&hellip; that's why we keep hitting the same wall.&rdquo; They finally understood each other.</p>
+              <p>But then the offsite would end.</p>
+              <p>Everyone would go back to work and somehow&hellip; the same decisions stayed stuck. The same roadmap debates replayed. The same sprint planning chaos returned.</p>
+              <p class="about__story-card-accent">That's when something clicked for me:</p>
+              <p>Understanding why a team struggles doesn't automatically change how the team works.</p>
+              <p>Knowing someone is &ldquo;Strategic&rdquo; doesn't fix sprint planning. A strengths map alone won't reshape how product calls get made.</p>
+              <p>Insight is powerful&mdash;but only if it connects to the systems teams actually run on every day.</p>
+              <p>Team work can't stay abstract. It has to plug directly into the frameworks teams live inside: planning, prioritization, execution, strategy.</p>
+              <p class="about__story-card-accent">That's why I started <strong>Aligned Arc.</strong></p>
+              <p>A place where team dynamics aren't separate from the work&mdash;they're woven into it.</p>
+              <p>Same workshop. Same room. But now it's not just insight.</p>
+              <p><strong>It's insight with integration.</strong></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PANEL 3: How I Work — Circle Process Steps -->
+      <div class="about__method">
+        <div class="container">
+          <h3 class="about__method-title">I've perfected coaching and offer a bespoke guidance through the process.</h3>
+
+          <div class="about__method-steps">
+            <div class="about__method-step" data-method-step>
+              <div class="about__method-circle about__method-circle--yellow">
+                <span class="about__method-num">1</span>
+              </div>
+              <div class="about__method-content">
+                <h4 class="about__method-step-title">Discovery Phase</h4>
+                <p class="about__method-text">I facilitate. Your team thinks. We start with a call to get to know each other better. We'll discuss your background, aspirations, and the goals you're striving to achieve.</p>
+              </div>
+            </div>
+
+            <div class="about__method-step" data-method-step>
+              <div class="about__method-circle about__method-circle--cyan">
+                <span class="about__method-num">2</span>
+              </div>
+              <div class="about__method-content">
+                <h4 class="about__method-step-title">Planning Phase</h4>
+                <p class="about__method-text">I structure it. We map how your team processes information. We create a structured, yet flexible plan tailored to your coaching journey&mdash;one that is measurable, logical, and designed to keep you on track.</p>
+              </div>
+            </div>
+
+            <div class="about__method-step" data-method-step>
+              <div class="about__method-circle about__method-circle--pink">
+                <span class="about__method-num">3</span>
+              </div>
+              <div class="about__method-content">
+                <h4 class="about__method-step-title">Integration Phase</h4>
+                <p class="about__method-text">Build frameworks that match. You own them. The insight connects to the systems your team runs on every day&mdash;planning, prioritization, execution, strategy.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="about__method-principle">
+            <p class="about__method-principle-big">Not dependency. <strong>Capacity.</strong></p>
+            <p class="about__method-principle-sub">That's the whole point.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- PANEL 4: Launch Offer — Soft Banner -->
+      <div class="about__launch">
+        <div class="container">
+          <div class="about__launch-banner">
+            <div class="about__launch-top">
+              <span class="about__launch-tag">Early access</span>
+              <p class="about__launch-quiet">Aligned Arc is new. The coaching experience behind it isn't. Here's how that benefits you.</p>
+            </div>
+            <div class="about__launch-grid">
+              <div class="about__launch-headline-col">
+                <h3 class="about__launch-headline">First 5 partners get a head start.</h3>
+                <p class="about__launch-subline">You get experienced facilitation at launch pricing. We build proof of impact together.</p>
+                <a href="#contact" class="about__launch-link">Reserve your spot <span aria-hidden="true">&rarr;</span></a>
+              </div>
+              <div class="about__launch-perks-col">
+                <div class="about__launch-perk">
+                  <span class="about__launch-perk-value">20% off</span>
+                  <span class="about__launch-perk-label">workshop investment</span>
+                </div>
+                <div class="about__launch-perk">
+                  <span class="about__launch-perk-value">Case study</span>
+                  <span class="about__launch-perk-label">detailed write-up with your permission</span>
+                </div>
+                <div class="about__launch-perk">
+                  <span class="about__launch-perk-value">90-day support</span>
+                  <span class="about__launch-perk-label">priority access after the workshop</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </section>
 
     <!-- CONTACT FORM SECTION -->
