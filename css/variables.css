@@ -29,10 +29,10 @@
   --font-display: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
 
   /* Fluid Typography Scale using clamp() */
-  --text-xs: clamp(0.75rem, 0.73rem + 0.12vw, 0.8125rem);
-  --text-sm: clamp(0.875rem, 0.84rem + 0.18vw, 0.96875rem);
-  --text-base: clamp(1rem, 0.96rem + 0.2vw, 1.0625rem);
-  --text-lg: clamp(1.125rem, 1.05rem + 0.35vw, 1.25rem);
+  --text-xs: clamp(0.8125rem, 0.78rem + 0.15vw, 0.875rem);
+  --text-sm: clamp(0.9375rem, 0.9rem + 0.2vw, 1.0625rem);
+  --text-base: clamp(1.0625rem, 1.02rem + 0.25vw, 1.15rem);
+  --text-lg: clamp(1.1875rem, 1.1rem + 0.4vw, 1.35rem);
   --text-xl: clamp(1.25rem, 1.15rem + 0.5vw, 1.5rem);
   --text-2xl: clamp(1.5rem, 1.28rem + 1vw, 2rem);
   --text-3xl: clamp(1.875rem, 1.5rem + 1.75vw, 2.875rem);
@@ -118,7 +118,7 @@
 
 @media (max-width: 479px) {
   :root {
-    --container-padding: var(--space-sm);
+    --container-padding: var(--space-md);
   }
 }
 

@@ -1163,7 +1163,7 @@
 }
 .about__method-circle--yellow::before {
   background: #fdf0a0;
-  border-color: #e6ca1a;
+  border-color: var(--color-yellow);
   opacity: 0;
 }
 .about__method-step.is-visible .about__method-circle--yellow::before {
@@ -1174,8 +1174,8 @@
   color: var(--color-cyan);
 }
 .about__method-circle--cyan::before {
-  background: #c5e8f0;
-  border-color: #8ec8d8;
+  background: #65cdbf;
+  border-color: var(--color-cyan);
   opacity: 0;
 }
 .about__method-step.is-visible .about__method-circle--cyan::before {
@@ -1187,7 +1187,7 @@
 }
 .about__method-circle--pink::before {
   background: #f0d4d8;
-  border-color: #d09fa6;
+  border-color: var(--color-pink);
   opacity: 0;
 }
 .about__method-step.is-visible .about__method-circle--pink::before {
@@ -1612,6 +1612,9 @@
 @media (max-width: 1023px) {
   .about__headline {
     font-size: var(--text-3xl);
+    text-indent: 0;
+    margin-bottom: var(--space-sm);
+    text-align: center;
   }
 
   .about__profile-card {
@@ -1666,7 +1669,9 @@
 
   .about__headline {
     font-size: var(--text-2xl);
-    margin-bottom: var(--space-xl);
+    text-indent: 0;
+    margin-bottom: var(--space-sm);
+    text-align: center;
   }
 
   .about__profile-card {
