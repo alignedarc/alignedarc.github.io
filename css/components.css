@@ -182,6 +182,7 @@
     top: 1rem;
     padding: 0.5rem 1rem;
     width: fit-content;
+    min-width: min(14rem, calc(100vw - 1rem));
   }
 
   .nav__logo img {
