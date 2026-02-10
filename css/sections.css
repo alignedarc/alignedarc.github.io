@@ -2725,12 +2725,12 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: var(--text-xs);
+  font-size: var(--text-base);
   text-transform: uppercase;
   letter-spacing: 0.08em;
   font-weight: 600;
   color: var(--color-charcoal);
-  background: rgba(245, 199, 124, 0.3);
+  background: var(--color-yellow);
   border-radius: var(--radius-pill);
   padding: 0.25rem 0.7rem;
   margin-bottom: var(--space-sm);
@@ -2738,9 +2738,10 @@
 
 .story-cta__step-title {
   font-family: var(--font-display);
-  font-size: var(--text-lg);
+  font-size: var(--text-2xl);
   color: var(--color-charcoal);
   margin-bottom: var(--space-xs);
+  font-weight: 600;
 }
 
 .story-cta__step-desc {
@@ -2751,7 +2752,7 @@
 .story-cta__step-example {
   font-size: var(--text-sm);
   color: var(--color-charcoal);
-  background: rgba(3, 167, 145, 0.08);
+  background: #f0d4d8;
   border-radius: var(--radius-lg);
   padding: var(--space-sm);
 }
