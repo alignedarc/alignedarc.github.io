@@ -1987,6 +1987,10 @@
   position: relative;
   width: 95%;
   aspect-ratio: 1 / 1;
+  box-sizing: border-box;
+  padding: clamp(10px, 2.5vw, 18px);
+  overflow: hidden; /* Fallback for browsers without overflow: clip */
+  overflow: clip;
 }
 
 /* The rotating layer */
