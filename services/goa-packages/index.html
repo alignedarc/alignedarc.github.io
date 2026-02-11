@@ -127,7 +127,14 @@
       <ul class="nav__menu" id="nav-menu">
         <li><a href="/">HOME</a></li>
         <li><a href="/#process">PROCESS</a></li>
-        <li><a href="/#services">SERVICES</a></li>
+        <li class="nav__dropdown-parent">
+          <a href="/#services">SERVICES <svg class="nav__dropdown-arrow" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <ul class="nav__dropdown">
+            <li><a href="/services/quick-sessions/">Quick Sessions</a></li>
+            <li><a href="/services/core-workshops/">Core Workshops</a></li>
+            <li><a href="/services/goa-packages/">Goa Packages</a></li>
+          </ul>
+        </li>
         <li><a href="/#about">ABOUT</a></li>
         <li><a href="/#contact" class="btn btn--primary">GET STARTED</a></li>
       </ul>

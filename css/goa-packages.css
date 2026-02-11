@@ -25,6 +25,15 @@
   color: var(--color-charcoal);
 }
 
+.nav__dropdown a {
+  color: var(--color-charcoal);
+}
+
+.nav__dropdown a:hover {
+  background-color: rgba(208, 159, 166, 0.15);
+  color: #D09FA6;
+}
+
 .nav__menu .btn.btn--primary {
   background-color: var(--color-charcoal);
   color: #fff;

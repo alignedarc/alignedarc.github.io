@@ -43,6 +43,10 @@
     navMenu.classList.remove('active');
     navToggle.setAttribute('aria-expanded', 'false');
     document.body.style.overflow = '';
+
+    // Close any open dropdowns
+    const openDropdown = document.querySelector('.nav__dropdown-parent.open');
+    if (openDropdown) openDropdown.classList.remove('open');
   }
 
   /**
@@ -172,6 +176,22 @@
     navLinks.forEach(link => {
       link.addEventListener('click', handleNavLinkClick);
     });
+
+    // Mobile dropdown toggle for Services
+    const dropdownParent = document.querySelector('.nav__dropdown-parent');
+    if (dropdownParent) {
+      const dropdownToggle = dropdownParent.querySelector(':scope > a');
+      if (dropdownToggle) {
+        dropdownToggle.addEventListener('click', function(e) {
+          // Only toggle on mobile
+          if (window.innerWidth <= 1050) {
+            e.preventDefault();
+            e.stopPropagation();
+            dropdownParent.classList.toggle('open');
+          }
+        });
+      }
+    }
 
     // Sticky navigation on scroll
     let scrollTicking = false;
