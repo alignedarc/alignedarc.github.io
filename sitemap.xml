@@ -7,47 +7,47 @@
   <!-- Homepage -->
   <url>
     <loc>https://alignedarc.com/</loc>
-    <lastmod>2025-01-15</lastmod>
+    <lastmod>2026-02-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
-  <!-- Services Section -->
+  <!-- Services Section — team alignment workshops, quarterly planning, innovation, strategy, Goa offsites -->
   <url>
     <loc>https://alignedarc.com/#services</loc>
-    <lastmod>2025-01-15</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-02-11</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
-  <!-- Process Section -->
+  <!-- Process Section — how team workshops work -->
   <url>
     <loc>https://alignedarc.com/#process</loc>
-    <lastmod>2025-01-15</lastmod>
+    <lastmod>2026-02-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
-  <!-- Results Section -->
-  <url>
-    <loc>https://alignedarc.com/#results</loc>
-    <lastmod>2025-01-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- About Section -->
+  <!-- About Section — team workshop facilitator in Goa, India -->
   <url>
     <loc>https://alignedarc.com/#about</loc>
-    <lastmod>2025-01-15</lastmod>
+    <lastmod>2026-02-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Contact Section -->
+  <!-- FAQ Section — frequently asked questions about team workshops, offsites, facilitation -->
+  <url>
+    <loc>https://alignedarc.com/#faq</loc>
+    <lastmod>2026-02-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Contact Section — book a team workshop or Goa offsite -->
   <url>
     <loc>https://alignedarc.com/#contact</loc>
-    <lastmod>2025-01-15</lastmod>
+    <lastmod>2026-02-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

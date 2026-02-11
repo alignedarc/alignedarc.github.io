@@ -22,6 +22,11 @@
       }
       var principle = document.querySelector('.about__method-principle');
       if (principle) principle.classList.add('is-visible');
+      // Also reveal FAQ items
+      var faqItems = document.querySelectorAll('.faq__item');
+      for (var k = 0; k < faqItems.length; k++) {
+        faqItems[k].classList.add('is-visible');
+      }
     });
     return;
   }
@@ -335,6 +340,30 @@
     }
   }
 
+  /* ----- FAQ Slide-in Reveal ----- */
+  function initFaqReveal() {
+    var items = document.querySelectorAll('.faq__item');
+    if (!items.length) return;
+
+    // Set staggered delay via CSS custom property
+    for (var i = 0; i < items.length; i++) {
+      items[i].style.setProperty('--faq-delay', (i * 0.1) + 's');
+    }
+
+    var faqObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          faqObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+    for (var j = 0; j < items.length; j++) {
+      faqObserver.observe(items[j]);
+    }
+  }
+
   /* ----- Init ----- */
   function init() {
     createRevealObserver('.story-reveal:not(.story-reveal--late)');
@@ -343,6 +372,7 @@
     initTransformToggle();
     initCtaPathAnimation();
     initMethodSteps();
+    initFaqReveal();
   }
 
   if (document.readyState === 'loading') {

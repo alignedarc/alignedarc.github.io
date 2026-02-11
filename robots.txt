@@ -5,13 +5,38 @@
 User-agent: *
 Allow: /
 
-# Disallow access to certain directories
+# Explicitly allow AI search crawlers (agentic search optimization)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+# Disallow access to non-content directories
 Disallow: /assets/fonts/
 Disallow: /.git/
 Disallow: /.github/
-
-# Crawl-delay (optional, uncomment if needed to reduce server load)
-# Crawl-delay: 10
 
 # Sitemap location
 Sitemap: https://alignedarc.com/sitemap.xml
