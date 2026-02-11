@@ -52,10 +52,26 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Quick Sessions — 2-3 hour focused team workshops -->
+  <url>
+    <loc>https://alignedarc.com/services/quick-sessions/</loc>
+    <lastmod>2026-02-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Core Workshops — full-day team workshops -->
+  <url>
+    <loc>https://alignedarc.com/services/core-workshops/</loc>
+    <lastmod>2026-02-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
   <!-- Goa & Premium Packages — multi-day offsite packages in Goa -->
   <url>
-    <loc>https://alignedarc.com/goa-packages/</loc>
-    <lastmod>2026-02-11</lastmod>
+    <loc>https://alignedarc.com/services/goa-packages/</loc>
+    <lastmod>2026-02-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
