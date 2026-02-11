@@ -27,7 +27,8 @@
   var LINE_W      = 1.0;         // regular contour line width
   var MAJOR_W     = 1.6;         // major (every Nth) contour width
   var MAJOR_N     = 4;           // major line interval
-  var PINK        = [208, 159, 166]; // theme pink RGB
+  var colorAttr   = canvas.getAttribute('data-contour-rgb');
+  var PINK        = colorAttr ? colorAttr.split(',').map(Number) : [208, 159, 166];
   var A_MIN       = 0.20;        // min line opacity (lowest level)
   var A_MAX       = 0.60;        // max line opacity (highest level)
   var LERP_RATE   = 0.10;        // mouse-follow speed

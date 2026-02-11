@@ -1,0 +1,673 @@
+/* ===================================
+   GOA & PREMIUM PACKAGES — Page Styles
+   Primary accent: Pink (#D09FA6)
+   =================================== */
+
+/* ===================================
+   PINK THEME — NAV OVERRIDE
+   =================================== */
+.nav {
+  background-image: none;
+  background-color: rgba(208, 159, 166, 0.92);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.nav.scrolled {
+  background-color: rgba(208, 159, 166, 0.96);
+}
+
+.nav__menu a {
+  color: #fff;
+}
+
+.nav__menu a:hover {
+  color: var(--color-charcoal);
+}
+
+.nav__menu .btn.btn--primary {
+  background-color: var(--color-charcoal);
+  color: #fff;
+}
+
+.nav__menu .btn.btn--primary:hover {
+  background-color: #fff;
+  color: var(--color-charcoal);
+}
+
+.nav__toggle span {
+  background-color: #fff;
+}
+
+/* ===================================
+   PINK THEME — SCROLL ARROW OVERRIDE
+   =================================== */
+.hero__scroll-icon-wrap {
+  background: var(--color-pink);
+}
+
+/* ===================================
+   HERO SECTION
+   =================================== */
+.goa-hero {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--space-4xl) var(--space-md) var(--space-2xl);
+  overflow: hidden;
+}
+
+.goa-hero__container {
+  position: relative;
+  z-index: var(--z-base);
+}
+
+.goa-hero__content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.goa-hero__eyebrow {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-pink);
+  background: rgba(208, 159, 166, 0.15);
+  border: 1px solid rgba(208, 159, 166, 0.3);
+  padding: 0.4em 1.2em;
+  border-radius: var(--radius-pill);
+  margin-bottom: var(--space-lg);
+}
+
+.goa-hero__title {
+  font-family: var(--font-body);
+  font-size: var(--text-4xl);
+  font-weight: 700;
+  line-height: var(--leading-tight);
+  color: var(--color-charcoal);
+  margin-bottom: var(--space-lg);
+}
+
+.goa-hero__meta {
+  margin-top: var(--space-md);
+}
+
+.goa-hero__investment {
+  font-size: var(--text-lg);
+  color: var(--color-charcoal);
+  margin-bottom: var(--space-xs);
+}
+
+.goa-hero__investment strong {
+  color: var(--color-pink);
+}
+
+.goa-hero__note {
+  font-size: var(--text-sm);
+  color: var(--color-text-light);
+}
+
+/* ===================================
+   WHY GOA SECTION
+   =================================== */
+.goa-why {
+  padding: var(--space-2xl) 0 var(--space-xl);
+}
+
+.goa-why__title {
+  font-family: var(--font-body);
+  font-size: var(--text-3xl);
+  font-weight: 700;
+  text-align: center;
+  color: var(--color-charcoal);
+  margin-bottom: var(--space-2xl);
+}
+
+.goa-why__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-lg);
+  /* max-width: 900px; */
+  margin: 0 auto;
+}
+
+.goa-why__card {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.goa-why__card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.goa-why__icon {
+  width: 40px;
+  height: 40px;
+  color: var(--color-pink);
+  margin-bottom: var(--space-sm);
+}
+
+.goa-why__card-title {
+  font-family: var(--font-body);
+  font-size: var(--text-lg);
+  font-weight: 600;
+  color: var(--color-charcoal);
+  margin-bottom: var(--space-xs);
+}
+
+.goa-why__card-text {
+  font-size: var(--text-sm);
+  color: var(--color-text-light);
+  line-height: var(--leading-relaxed);
+}
+
+/* ===================================
+   PACKAGES INTRO HEADER
+   =================================== */
+.goa-packages-intro {
+  padding: var(--space-2xl) 0 var(--space-lg);
+}
+
+.goa-packages-intro__header {
+  text-align: center;
+}
+
+.goa-packages-intro__title {
+  font-family: var(--font-body);
+  font-size: var(--text-3xl);
+  font-weight: 700;
+  color: var(--color-charcoal);
+  margin-bottom: var(--space-sm);
+}
+
+.goa-packages-intro__subtitle {
+  font-size: var(--text-base);
+  color: var(--color-text-light);
+}
+
+/* ===================================
+   INDIVIDUAL PACKAGE SECTIONS
+   =================================== */
+.goa-pkg {
+  padding: var(--space-2xl) 0;
+}
+
+.goa-pkg--alt {
+  background: rgba(208, 159, 166, 0.06);
+}
+
+.goa-pkg__inner {
+  /* max-width: 960px; */
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-left: 4px solid var(--color-pink);
+  border-radius: var(--radius-md);
+  padding: var(--space-xl);
+}
+
+.goa-pkg__header {
+  margin-bottom: var(--space-md);
+}
+
+.goa-pkg__badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: white;
+  background: var(--color-pink);
+  padding: 0.25em 0.75em;
+  border-radius: var(--radius-pill);
+  margin-bottom: var(--space-sm);
+}
+
+.goa-pkg__name {
+  font-family: var(--font-body);
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  color: var(--color-charcoal);
+  margin-bottom: var(--space-xs);
+}
+
+.goa-pkg__price {
+  font-family: var(--font-body);
+  font-size: var(--text-xl);
+  font-weight: 600;
+  color: var(--color-pink);
+  margin-bottom: var(--space-sm);
+}
+
+.goa-pkg__pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.goa-pkg__pill {
+  display: inline-block;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--color-charcoal);
+  background: rgba(208, 159, 166, 0.12);
+  border: 1px solid rgba(208, 159, 166, 0.25);
+  padding: 0.25em 0.75em;
+  border-radius: var(--radius-pill);
+}
+
+.goa-pkg__pitch {
+  font-size: var(--text-base);
+  color: var(--color-charcoal);
+  line-height: var(--leading-relaxed);
+  margin-bottom: var(--space-lg);
+  font-style: italic;
+}
+
+.goa-pkg__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-lg);
+  margin-bottom: var(--space-lg);
+}
+
+.goa-pkg__block h4 {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-pink);
+  margin-bottom: var(--space-sm);
+}
+
+.goa-pkg__block--muted h4 {
+  color: var(--color-text-light);
+}
+
+.goa-pkg__block ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.goa-pkg__block ul li {
+  position: relative;
+  padding-left: 1.25em;
+  font-size: var(--text-sm);
+  color: var(--color-text-light);
+  line-height: var(--leading-relaxed);
+  margin-bottom: 0.5em;
+}
+
+.goa-pkg__block ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-pink);
+}
+
+.goa-pkg__block--muted ul li::before {
+  background: var(--color-text-light);
+  opacity: 0.4;
+}
+
+.goa-pkg__block ul li strong {
+  color: var(--color-charcoal);
+}
+
+.goa-pkg__note {
+  font-size: var(--text-sm);
+  color: var(--color-text-light);
+  background: rgba(208, 159, 166, 0.08);
+  padding: var(--space-sm);
+  border-radius: var(--radius-sm);
+  margin-bottom: var(--space-lg);
+}
+
+.goa-pkg__cta {
+  padding-top: var(--space-sm);
+}
+
+/* ===================================
+   RETAINER OPTIONS
+   =================================== */
+.goa-retainers {
+  padding: var(--space-4xl) 0;
+}
+
+.goa-retainers__header {
+  text-align: center;
+  margin-bottom: var(--space-2xl);
+}
+
+.goa-retainers__title {
+  font-family: var(--font-body);
+  font-size: var(--text-3xl);
+  font-weight: 700;
+  color: var(--color-charcoal);
+  margin-bottom: var(--space-sm);
+}
+
+.goa-retainers__subtitle {
+  font-size: var(--text-base);
+  color: var(--color-text-light);
+}
+
+.goa-retainers__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-lg);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.goa-retainer {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-top: 4px solid var(--color-pink);
+  border-radius: var(--radius-md);
+  padding: var(--space-xl);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.goa-retainer:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.goa-retainer__name {
+  font-family: var(--font-body);
+  font-size: var(--text-xl);
+  font-weight: 700;
+  color: var(--color-charcoal);
+  margin-bottom: var(--space-xs);
+}
+
+.goa-retainer__price {
+  font-family: var(--font-body);
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  color: var(--color-pink);
+  margin-bottom: var(--space-lg);
+}
+
+.goa-retainer__price span {
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-text-light);
+}
+
+.goa-retainer__includes,
+.goa-retainer__pick-if {
+  margin-bottom: var(--space-lg);
+}
+
+.goa-retainer__includes h4,
+.goa-retainer__pick-if h4 {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-pink);
+  margin-bottom: var(--space-sm);
+}
+
+.goa-retainer__includes ul,
+.goa-retainer__pick-if ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.goa-retainer__includes ul li,
+.goa-retainer__pick-if ul li {
+  position: relative;
+  padding-left: 1.25em;
+  font-size: var(--text-sm);
+  color: var(--color-text-light);
+  line-height: var(--leading-relaxed);
+  margin-bottom: 0.5em;
+}
+
+.goa-retainer__includes ul li::before,
+.goa-retainer__pick-if ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-pink);
+}
+
+/* ===================================
+   QUICK GUIDE / PACKAGE SELECTOR
+   =================================== */
+.goa-guide {
+  padding: var(--space-4xl) 0;
+  background: rgba(208, 159, 166, 0.08);
+}
+
+.goa-guide__header {
+  text-align: center;
+  margin-bottom: var(--space-2xl);
+}
+
+.goa-guide__title {
+  font-family: var(--font-body);
+  font-size: var(--text-3xl);
+  font-weight: 700;
+  color: var(--color-charcoal);
+  margin-bottom: var(--space-sm);
+}
+
+.goa-guide__subtitle {
+  font-size: var(--text-base);
+  color: var(--color-text-light);
+}
+
+.goa-guide__list {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.goa-guide__item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  width: 100%;
+  padding: var(--space-md) var(--space-lg);
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: var(--radius-md);
+  font-family: var(--font-body);
+  cursor: pointer;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
+  text-align: left;
+  text-decoration: none;
+  color: inherit;
+}
+
+.goa-guide__item:hover,
+.goa-guide__item:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-pink);
+  text-decoration: none;
+}
+
+.goa-guide__need {
+  flex: 1;
+  font-size: var(--text-sm);
+  color: var(--color-text-light);
+}
+
+.goa-guide__arrow {
+  font-size: var(--text-lg);
+  color: var(--color-pink);
+  flex-shrink: 0;
+}
+
+.goa-guide__answer {
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--color-charcoal);
+  flex-shrink: 0;
+  min-width: 160px;
+  text-align: right;
+}
+
+/* ===================================
+   FINAL CTA
+   =================================== */
+.goa-cta {
+  padding: var(--space-4xl) 0;
+  background: rgba(208, 159, 166, 0.08);
+}
+
+.goa-cta__content {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.goa-cta__title {
+  font-family: var(--font-body);
+  font-size: var(--text-3xl);
+  font-weight: 700;
+  color: var(--color-charcoal);
+  margin-bottom: var(--space-md);
+}
+
+.goa-cta__text {
+  font-size: var(--text-base);
+  color: var(--color-text-light);
+  line-height: var(--leading-relaxed);
+  margin-bottom: var(--space-xl);
+}
+
+/* ===================================
+   SCROLL REVEAL ANIMATIONS
+   =================================== */
+.goa-reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.goa-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===================================
+   RESPONSIVE — Mobile nav fix
+   =================================== */
+@media (max-width: 1050px) {
+  .nav__menu {
+    background-color: rgba(208, 159, 166, 0.98);
+  }
+}
+
+/* ===================================
+   RESPONSIVE — Tablet (<=1023px)
+   =================================== */
+@media (max-width: 1023px) {
+  .goa-pkg__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ===================================
+   RESPONSIVE — Mobile (<=767px)
+   =================================== */
+@media (max-width: 767px) {
+  .goa-hero {
+    padding-top: calc(var(--nav-height-mobile) + var(--space-2xl));
+  }
+
+  .goa-hero__title {
+    font-size: var(--text-3xl);
+  }
+
+  .goa-why__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+
+  .goa-pkg__inner {
+    padding: var(--space-lg);
+  }
+
+  .goa-pkg__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .goa-retainers__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .goa-guide__item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    padding: var(--space-md);
+  }
+
+  .goa-guide__arrow {
+    display: none;
+  }
+
+  .goa-guide__answer {
+    text-align: left;
+    min-width: unset;
+    color: var(--color-pink);
+  }
+}
+
+/* ===================================
+   PREFERS REDUCED MOTION
+   =================================== */
+@media (prefers-reduced-motion: reduce) {
+  .goa-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .goa-why__card,
+  .goa-retainer,
+  .goa-guide__item {
+    transition: none;
+  }
+}
