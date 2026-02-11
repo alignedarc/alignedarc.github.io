@@ -227,7 +227,7 @@
 
 .services__tab-label {
   font-family: var(--font-display);
-  font-size: var(--text-2xl);
+  font-size: var(--text-3xl);
   font-weight: 600;
 }
 
@@ -1295,7 +1295,7 @@
 .about__method-step-title {
   font-family: var(--font-display);
   font-size: var(--text-2xl);
-  font-weight: 500;
+  font-weight: 600;
   color: var(--color-charcoal);
   margin-bottom: var(--space-sm);
   line-height: var(--leading-tight);
@@ -1770,7 +1770,7 @@
   }
 
   .about__story {
-    padding: var(--space-2xl) 0;
+    padding: var(--space-3xl) 0;
   }
 
   .about__story-card {
@@ -1778,7 +1778,7 @@
   }
 
   .about__story-card-title {
-    font-size: var(--text-xl);
+    font-size: var(--text-3xl);
   }
 
   .about__method {
@@ -1786,7 +1786,7 @@
   }
 
   .about__method-title {
-    font-size: var(--text-2xl);
+    font-size: var(--text-4xl);
   }
 
   .about__method-steps {
