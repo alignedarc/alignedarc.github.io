@@ -268,6 +268,9 @@
     setTravelerAt(0);
 
     if ('IntersectionObserver' in window) {
+      // On mobile the CTA section is very tall (stacked step cards),
+      // so a 0.35 threshold may never be met within the viewport.
+      var isMobile = window.innerWidth < 768;
       var observer = new IntersectionObserver(function(entries) {
         var entry = entries[0];
         if (entry.isIntersecting) {
@@ -275,7 +278,10 @@
         } else {
           stop();
         }
-      }, { threshold: 0.35, rootMargin: '0px 0px -15% 0px' });
+      }, {
+        threshold: isMobile ? 0.08 : 0.35,
+        rootMargin: isMobile ? '0px' : '0px 0px -15% 0px'
+      });
       observer.observe(section);
     } else {
       start();
