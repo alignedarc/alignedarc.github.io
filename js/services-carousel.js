@@ -32,6 +32,9 @@
 
       if (!viewport || !track || !cards.length || !prevBtn || !nextBtn) return null;
 
+      // Read the actual CSS gap so card sizing stays in sync with styles
+      const computedGap = parseFloat(getComputedStyle(track).columnGap) || 24;
+
       const state = {
         carousel,
         viewport,
@@ -39,6 +42,7 @@
         cards,
         prevBtn,
         nextBtn,
+        gap: computedGap,
         currentIndex: 0,
         cardsPerView: this.getCardsPerView(),
         isTransitioning: false,
@@ -69,26 +73,9 @@
     }
 
     sizeCards(state) {
-      const { viewport, cards, track } = state;
+      const { viewport, cards, track, gap } = state;
       state.cardsPerView = this.getCardsPerView();
 
-      const isMobileScroll = window.innerWidth < 768;
-      if (isMobileScroll) {
-        track.style.transform = '';
-        const gap = 16;
-        const viewportWidth = viewport.clientWidth;
-        const cardWidth = viewportWidth - gap;
-        cards.forEach(card => {
-          card.style.width = cardWidth + 'px';
-          card.style.minWidth = cardWidth + 'px';
-        });
-        state.currentIndex = 0;
-        this.updateButtons(state);
-        this.stopAuto(state);
-        return;
-      }
-
-      const gap = 16;
       const viewportWidth = viewport.clientWidth;
       const totalGaps = (state.cardsPerView - 1) * gap;
       const cardWidth = (viewportWidth - totalGaps) / state.cardsPerView;
@@ -114,10 +101,9 @@
     }
 
     updatePosition(state) {
-      const { track, cards, viewport } = state;
+      const { track, cards, viewport, gap } = state;
       if (!cards.length) return;
 
-      const gap = 16;
       const viewportWidth = viewport.clientWidth;
       const totalGaps = (state.cardsPerView - 1) * gap;
       const cardWidth = (viewportWidth - totalGaps) / state.cardsPerView;
@@ -170,7 +156,7 @@
         const dx = startX - endX;
         const dy = Math.abs(startY - endY);
 
-        if (Math.abs(dx) > 50 && Math.abs(dx) > dy && window.innerWidth >= 768) {
+        if (Math.abs(dx) > 50 && Math.abs(dx) > dy) {
           if (dx > 0) {
             this.next(state);
           } else {
@@ -182,7 +168,7 @@
     }
 
     startAuto(state) {
-      const shouldAuto = !this.prefersReducedMotion.matches && window.innerWidth >= 768;
+      const shouldAuto = !this.prefersReducedMotion.matches;
       if (!shouldAuto) return;
       if (state.cards.length <= state.cardsPerView) return;
 
