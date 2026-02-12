@@ -263,6 +263,7 @@
 
 .services__tab-desc {
   font-weight: 700;
+  font-size: var(--text-lg);
 }
 
 .services__tab--quick {
@@ -472,7 +473,7 @@
 }
 
 .services__workshop-title {
-  font-size: var(--text-xl);
+  font-size: var(--text-2xl);
   font-weight: 700;
   margin: 0;
   color: var(--color-charcoal);
@@ -657,7 +658,7 @@
   }
 
   .services__caption-heading {
-    font-size: var(--text-2xl);
+    font-size: var(--text-4xl);
     padding: 0 var(--container-padding);
   }
 
@@ -1733,10 +1734,11 @@
   }
 
   .about__headline {
-    font-size: var(--text-2xl);
+    font-size: var(--text-3xl);
     text-indent: 0;
     margin-bottom: var(--space-sm);
     text-align: center;
+    padding: 0 var(--container-padding);
   }
 
   .about__profile-card {
@@ -3218,7 +3220,7 @@
   }
 
   .story-cta__title {
-    font-size: var(--text-2xl);
+    font-size: var(--text-3xl);
   }
 
   .story-stack__card--cta .story-stack__card-inner {
